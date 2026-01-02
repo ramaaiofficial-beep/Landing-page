@@ -41,7 +41,7 @@ export const VisionMissionSection = () => {
         </div>
 
         {/* Vision & Mission Cards */}
-        <div className="grid md:grid-cols-2 items-start" style={{ gap: "clamp(1.5rem, 4vw, 2.5rem)" }}>
+        <div className="grid md:grid-cols-2 items-start vision-mission-grid" style={{ gap: "clamp(1.5rem, 4vw, 2.5rem)" }}>
           {/* Vision */}
           <div className="text-center">
             <div className="relative mx-auto mb-6" style={{ width: "clamp(4rem, 8vw, 6rem)", height: "clamp(4rem, 8vw, 6rem)" }}>
@@ -87,7 +87,7 @@ export const VisionMissionSection = () => {
           </div>
 
           {/* Mission */}
-          <div className="text-center">
+          <div className="text-center mission-section">
             <div className="relative mx-auto mb-6" style={{ width: "clamp(4rem, 8vw, 6rem)", height: "clamp(4rem, 8vw, 6rem)" }}>
               {/* Smooth floating animation for pyramid */}
               <div className="absolute inset-0 flex items-end justify-center animate-float">

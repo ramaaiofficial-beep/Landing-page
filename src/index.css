@@ -492,4 +492,15 @@
     0%, 100% { transform: translateX(-50%) rotate(-2deg); }
     50% { transform: translateX(-50%) rotate(2deg); }
   }
+
+  /* Add margin-top to VisionMissionSection grid on mobile only */
+  @media (max-width: 767px) {
+    .vision-mission-grid {
+      margin-top: clamp(1.5rem, 4vw, 2.5rem) !important;
+    }
+    
+    .mission-section {
+      margin-top: clamp(1rem, 3vw, 2rem) !important;
+    }
+  }
 }
