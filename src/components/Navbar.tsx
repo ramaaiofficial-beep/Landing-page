@@ -80,7 +80,7 @@ export const Navbar = () => {
       }}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between" style={{ minHeight: "clamp(3.5rem, 8vw, 5rem)", height: "auto" }}>
+        <div className="flex items-center justify-between relative" style={{ minHeight: "clamp(3.5rem, 8vw, 5rem)", height: "auto" }}>
           {/* Logo */}
           <a 
             href="#home" 
@@ -92,8 +92,11 @@ export const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div 
-            className="hidden md:flex items-center gap-1 relative rounded-full px-2 py-1"
+            className="hidden md:flex items-center gap-1 rounded-full px-2 py-1"
             style={{
+              position: "absolute",
+              left: "50%",
+              transform: "translateX(-50%)",
               background: "linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(42, 15, 8, 0.5) 50%, rgba(0, 0, 0, 0.6) 100%)",
               backdropFilter: "blur(24px) saturate(180%)",
               WebkitBackdropFilter: "blur(24px) saturate(180%)",
@@ -104,7 +107,6 @@ export const Navbar = () => {
                 inset 0 1px 0 rgba(255, 255, 255, 0.1),
                 0 0 20px rgba(253, 80, 9, 0.15)
               `,
-              position: "relative",
               overflow: "hidden"
             }}
           >
