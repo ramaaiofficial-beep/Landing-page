@@ -23,7 +23,7 @@ export const HeroSection = () => {
         <div className="absolute bottom-1/4 right-1/4 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ width: "clamp(10rem, 25vw, 20rem)", height: "clamp(10rem, 25vw, 20rem)", animationDelay: "1s" }} />
       </div>
 
-      <div className="container-custom relative z-10" style={{ paddingTop: "clamp(4rem, 12vh, 8rem)", paddingBottom: "clamp(4rem, 12vh, 8rem)" }}>
+      <div className="container-custom relative z-10" style={{ paddingTop: "clamp(4rem, 8vw, 6rem)", paddingBottom: "clamp(4rem, 8vw, 6rem)" }}>
         <div className="max-w-4xl mx-auto text-center relative" style={{ paddingLeft: "clamp(0.5rem, 2vw, 1rem)", paddingRight: "clamp(0.5rem, 2vw, 1rem)" }}>
           {/* Red Gridlines Pattern */}
           <div 
@@ -92,11 +92,11 @@ export const HeroSection = () => {
                 animationDelay: "0.1s",
                 color: "#FAFAFA",
                 fontFamily: '"Spline Sans", sans-serif',
-                fontSize: "clamp(1.75rem, 4.5vw, 3.5rem)",
+                fontSize: "clamp(1.75rem, 4vw + 0.5rem, 3.5rem)",
                 fontStyle: "normal",
                 fontWeight: 300,
                 lineHeight: "1.1",
-                marginBottom: "clamp(1rem, 3vw, 1.5rem)",
+                marginBottom: "clamp(1rem, 2.5vw, 1.5rem)",
                 paddingLeft: "clamp(0.5rem, 2vw, 1rem)",
                 paddingRight: "clamp(0.5rem, 2vw, 1rem)"
               }}
@@ -109,7 +109,7 @@ export const HeroSection = () => {
                 style={{
                   color: "#FD5009",
                   fontFamily: '"Instrument Serif", serif',
-                  fontSize: "clamp(1.75rem, 4.5vw, 3.5rem)",
+                  fontSize: "clamp(1.75rem, 4vw + 0.5rem, 3.5rem)",
                   fontStyle: "italic",
                   fontWeight: 400,
                   lineHeight: "1.1"
@@ -120,12 +120,12 @@ export const HeroSection = () => {
             </h1>
 
             {/* Subheadline */}
-            <div className="rounded-xl max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s", padding: "clamp(1rem, 3vw, 1.5rem)", marginBottom: "clamp(1.5rem, 4vw, 2.5rem)" }}>
+            <div className="rounded-xl max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s", padding: "clamp(1rem, 2.5vw, 1.5rem)", marginBottom: "clamp(1.5rem, 3.5vw, 2.5rem)" }}>
               <p 
                 style={{
                   color: "#FAFAFA",
                   fontFamily: '"Public Sans", sans-serif',
-                  fontSize: "clamp(0.875rem, 1.8vw, 1.125rem)",
+                  fontSize: "clamp(0.875rem, 1.5vw + 0.25rem, 1.125rem)",
                   fontStyle: "normal",
                   fontWeight: 400,
                   lineHeight: "1.6",
