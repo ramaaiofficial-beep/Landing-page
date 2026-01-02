@@ -50,9 +50,9 @@ export const Footer = () => {
         }}
       />
 
-      <div className="container-custom relative z-10" style={{ paddingTop: "clamp(2rem, 5vw, 3rem)", paddingBottom: "clamp(2rem, 5vw, 3rem)" }}>
+      <div className="container-custom relative z-10" style={{ paddingTop: "clamp(3rem, 6vw, 4rem)", paddingBottom: "clamp(2.5rem, 5vw, 3.5rem)" }}>
         {/* Bottom Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between" style={{ paddingTop: "clamp(1.5rem, 4vw, 2.5rem)", gap: "clamp(1rem, 2.5vw, 1.5rem)" }}>
+        <div className="flex flex-col sm:flex-row items-center justify-between" style={{ gap: "clamp(1rem, 2.5vw, 1.5rem)" }}>
           {/* Left: Legal Links */}
           <div className="flex flex-wrap justify-center sm:justify-start order-2 sm:order-1" style={{ gap: "clamp(0.5rem, 1.5vw, 1rem)" }}>
             {footerLinks.legal.map((link, index) => (
