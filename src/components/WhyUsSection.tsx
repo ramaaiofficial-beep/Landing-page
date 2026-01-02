@@ -1,11 +1,20 @@
 import image1 from "@/assets/Background+Overlay+Shadow+OverlayBlur (1).png";
 import image2 from "@/assets/Background+Overlay+Shadow+OverlayBlur (2).png";
 import image3 from "@/assets/Background+Overlay+Shadow+OverlayBlur (3).png";
+import mobileImage1 from "@/assets/mobile-1.png";
+import mobileImage2 from "@/assets/mobile-2.png";
+import mobileImage3 from "@/assets/mobile-3.png";
 
 const images = [
   image1,
   image2,
   image3,
+];
+
+const mobileImages = [
+  mobileImage1,
+  mobileImage2,
+  mobileImage3,
 ];
 
 export const WhyUsSection = () => {
@@ -77,14 +86,22 @@ export const WhyUsSection = () => {
                 minHeight: "clamp(12rem, 30vw, 20rem)"
               }}
             >
+              {/* Desktop images - hidden on mobile */}
               <img 
                 src={image} 
                 alt={`Feature ${index + 1}`}
+                className="hidden md:block w-full h-full"
                 style={{ 
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "contain",
-                  display: "block"
+                  objectFit: "contain"
+                }}
+              />
+              {/* Mobile images - visible only on mobile */}
+              <img 
+                src={mobileImages[index]} 
+                alt={`Feature ${index + 1}`}
+                className="block md:hidden w-full h-full"
+                style={{ 
+                  objectFit: "contain"
                 }}
               />
             </div>
