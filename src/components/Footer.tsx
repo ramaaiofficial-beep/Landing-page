@@ -50,7 +50,7 @@ export const Footer = () => {
         }}
       />
 
-      <div className="container-custom relative z-10" style={{ paddingTop: "clamp(3rem, 6vw, 4rem)", paddingBottom: "clamp(2.5rem, 5vw, 3.5rem)" }}>
+      <div className="container-custom relative z-10" style={{ paddingTop: "clamp(1.5rem, 3vw, 2rem)", paddingBottom: "clamp(2rem, 4vw, 2.5rem)" }}>
         {/* Bottom Bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between" style={{ gap: "clamp(1rem, 2.5vw, 1.5rem)" }}>
           {/* Left: Legal Links */}
