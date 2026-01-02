@@ -10,7 +10,7 @@ export const CTASection = () => {
           background: "linear-gradient(135deg, rgba(253, 80, 9, 0.15) 0%, rgba(253, 80, 9, 0.05) 50%, transparent 100%)"
         }}
       >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary/10 rounded-full blur-3xl" style={{ width: "clamp(20rem, 50vw, 37.5rem)", height: "clamp(20rem, 50vw, 37.5rem)" }} />
       </div>
 
       <div className="container-custom relative z-10">
@@ -25,9 +25,10 @@ export const CTASection = () => {
               fontStyle: "normal",
               fontWeight: 600,
               lineHeight: "1.2",
-              marginBottom: "24px"
+              marginBottom: "clamp(1.5rem, 4vw, 2.5rem)",
+              paddingLeft: "clamp(0.5rem, 2vw, 1rem)",
+              paddingRight: "clamp(0.5rem, 2vw, 1rem)"
             }}
-            className="px-2"
           >
             Experience the Future of
             <br />
@@ -43,26 +44,27 @@ export const CTASection = () => {
               fontStyle: "normal",
               fontWeight: 400,
               lineHeight: "1.6",
-              marginBottom: "40px",
-              maxWidth: "672px",
+              marginBottom: "clamp(2rem, 5vw, 3rem)",
+              maxWidth: "clamp(20rem, 80vw, 42rem)",
               marginLeft: "auto",
               marginRight: "auto",
               textShadow: "0 1px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.6)",
-              letterSpacing: "0.01em"
+              letterSpacing: "0.01em",
+              paddingLeft: "clamp(1rem, 2vw, 1.5rem)",
+              paddingRight: "clamp(1rem, 2vw, 1.5rem)"
             }}
-            className="px-4"
           >
             Our platform seamlessly integrates learning, wellness, and
             engagement into one intelligent companion that grows with you.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center" style={{ gap: "clamp(1rem, 2.5vw, 1.5rem)" }}>
             <Button variant="heroOutline" size="xl" asChild>
               <a 
                 href="#contact"
                 style={{
                   color: "#FAFAFA",
                   fontFamily: '"Public Sans", sans-serif',
-                  fontSize: "12px",
+                  fontSize: "clamp(0.75rem, 1.2vw, 0.875rem)",
                   fontStyle: "normal",
                   fontWeight: 500,
                   lineHeight: "normal"

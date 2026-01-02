@@ -20,11 +20,11 @@ const buttonVariants = cva(
         glass: "bg-card/60 backdrop-blur-xl border border-border/50 text-foreground hover:bg-card/80 hover:border-primary/30",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-12 rounded-xl px-8 text-base",
-        xl: "h-14 rounded-xl px-10 text-lg",
-        icon: "h-10 w-10",
+        default: "",
+        sm: "rounded-md",
+        lg: "rounded-xl text-base",
+        xl: "rounded-xl text-lg",
+        icon: "",
       },
     },
     defaultVariants: {
@@ -41,9 +41,52 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size = "default", asChild = false, style, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
-    return <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />;
+    const sizeStyles: Record<string, React.CSSProperties> = {
+      default: { 
+        minHeight: "clamp(2.25rem, 4vw, 2.5rem)", 
+        paddingTop: "clamp(0.5rem, 1.2vw, 0.625rem)", 
+        paddingBottom: "clamp(0.5rem, 1.2vw, 0.625rem)",
+        paddingLeft: "clamp(1rem, 2.5vw, 1.5rem)",
+        paddingRight: "clamp(1rem, 2.5vw, 1.5rem)"
+      },
+      sm: { 
+        minHeight: "clamp(2rem, 3.5vw, 2.25rem)", 
+        paddingTop: "clamp(0.375rem, 1vw, 0.5rem)", 
+        paddingBottom: "clamp(0.375rem, 1vw, 0.5rem)",
+        paddingLeft: "clamp(0.75rem, 2vw, 1rem)",
+        paddingRight: "clamp(0.75rem, 2vw, 1rem)"
+      },
+      lg: { 
+        minHeight: "clamp(2.75rem, 5vw, 3rem)", 
+        paddingTop: "clamp(0.625rem, 1.5vw, 0.75rem)", 
+        paddingBottom: "clamp(0.625rem, 1.5vw, 0.75rem)",
+        paddingLeft: "clamp(2rem, 5vw, 2.5rem)",
+        paddingRight: "clamp(2rem, 5vw, 2.5rem)"
+      },
+      xl: { 
+        minHeight: "clamp(3rem, 6vw, 3.5rem)", 
+        paddingTop: "clamp(0.75rem, 1.8vw, 0.875rem)", 
+        paddingBottom: "clamp(0.75rem, 1.8vw, 0.875rem)",
+        paddingLeft: "clamp(2.5rem, 6vw, 3rem)",
+        paddingRight: "clamp(2.5rem, 6vw, 3rem)"
+      },
+      icon: { 
+        minHeight: "clamp(2.25rem, 4vw, 2.5rem)", 
+        minWidth: "clamp(2.25rem, 4vw, 2.5rem)", 
+        padding: 0 
+      },
+    };
+    const combinedStyle = { ...sizeStyles[size || "default"], ...style };
+    return (
+      <Comp 
+        className={cn(buttonVariants({ variant, size, className }))} 
+        style={combinedStyle}
+        ref={ref} 
+        {...props} 
+      />
+    );
   }
 );
 Button.displayName = "Button";

@@ -32,7 +32,7 @@ export const CareersSection = () => {
     <section id="careers" className="section-padding bg-background noise-overlay">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-6">
+        <div className="text-center max-w-2xl mx-auto" style={{ marginBottom: "clamp(1.5rem, 4vw, 2.5rem)" }}>
           <h2 
             style={{
               alignSelf: "stretch",
@@ -43,9 +43,10 @@ export const CareersSection = () => {
               fontStyle: "normal",
               fontWeight: 500,
               lineHeight: "1.2",
-              marginBottom: "16px"
+              marginBottom: "clamp(1rem, 2.5vw, 1.5rem)",
+              paddingLeft: "clamp(0.5rem, 2vw, 1rem)",
+              paddingRight: "clamp(0.5rem, 2vw, 1rem)"
             }}
-            className="px-2"
           >
             Internship & Graduate Programs
           </h2>
@@ -66,9 +67,9 @@ export const CareersSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
+        <div className="grid lg:grid-cols-2" style={{ gap: "clamp(2rem, 5vw, 3.5rem)" }}>
           {/* Programs */}
-          <div className="space-y-6">
+          <div style={{ display: "flex", flexDirection: "column", gap: "clamp(1.5rem, 4vw, 2.5rem)" }}>
             {programs.map((program) => (
               <div
                 key={program.title}
@@ -81,13 +82,13 @@ export const CareersSection = () => {
                   program.gradient
                     ? {
                         display: "flex",
-                        padding: "24px",
+                        padding: "clamp(1.5rem, 4vw, 2.5rem)",
                         flexDirection: "column",
                         justifyContent: "flex-start",
                         alignItems: "flex-start",
-                        gap: "10px",
+                        gap: "clamp(0.5rem, 1.5vw, 1rem)",
                         alignSelf: "stretch",
-                        borderRadius: "20px",
+                        borderRadius: "clamp(1rem, 2vw, 1.25rem)",
                         backgroundImage: `url(${heroBg}), linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(26, 10, 10, 0.9) 100%)`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
@@ -97,13 +98,13 @@ export const CareersSection = () => {
                       }
                     : {
                         display: "flex",
-                        padding: "24px",
+                        padding: "clamp(1.5rem, 4vw, 2.5rem)",
                         flexDirection: "column",
                         justifyContent: "flex-start",
                         alignItems: "flex-start",
-                        gap: "10px",
+                        gap: "clamp(0.5rem, 1.5vw, 1rem)",
                         alignSelf: "stretch",
-                        borderRadius: "20px",
+                        borderRadius: "clamp(1rem, 2vw, 1.25rem)",
                         backgroundImage: `url(${heroBg}), linear-gradient(180deg, rgba(26, 26, 26, 0.9) 0%, rgba(26, 15, 15, 0.9) 100%)`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
@@ -133,19 +134,20 @@ export const CareersSection = () => {
                 <div 
                   style={{
                     display: "flex",
-                    width: "58px",
-                    height: "58px",
-                    padding: "15px 16px",
+                    width: "clamp(3rem, 6vw, 3.625rem)",
+                    height: "clamp(3rem, 6vw, 3.625rem)",
+                    padding: "clamp(0.75rem, 1.5vw, 1rem)",
                     alignItems: "center",
-                    gap: "10px",
-                    borderRadius: "8px",
+                    justifyContent: "center",
+                    gap: "clamp(0.5rem, 1vw, 0.625rem)",
+                    borderRadius: "clamp(0.5rem, 1vw, 0.75rem)",
                     background: "#FFF",
                     boxShadow: "0 0 0 1px rgba(41, 0, 41, 0.1)",
                     backdropFilter: "blur(10px)",
-                    marginBottom: "16px"
+                    marginBottom: "clamp(1rem, 2.5vw, 1.5rem)"
                   }}
                 >
-                  <program.icon className="w-6 h-6 text-primary" />
+                  <program.icon className="text-primary" style={{ width: "clamp(1.25rem, 2.5vw, 1.5rem)", height: "clamp(1.25rem, 2.5vw, 1.5rem)" }} />
                 </div>
                 <h3 
                   style={{
@@ -156,7 +158,7 @@ export const CareersSection = () => {
                     fontStyle: "normal",
                     fontWeight: 400,
                     lineHeight: "1.3",
-                    marginBottom: "12px",
+                    marginBottom: "clamp(0.75rem, 2vw, 1rem)",
                     textShadow: "0 2px 8px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.8)",
                     letterSpacing: "0.01em"
                   }}
@@ -173,7 +175,7 @@ export const CareersSection = () => {
                     fontStyle: "normal",
                     fontWeight: 400,
                     lineHeight: "1.6",
-                    marginBottom: "24px",
+                    marginBottom: "clamp(1.5rem, 4vw, 2.5rem)",
                     textShadow: "0 1px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.6)",
                     letterSpacing: "0.01em"
                   }}
@@ -187,17 +189,20 @@ export const CareersSection = () => {
                   onClick={() => navigate("/apply")}
                   style={{
                     display: "flex",
-                    height: "40px",
-                    padding: "8px 24px",
+                    minHeight: "clamp(2.5rem, 5vw, 3rem)",
+                    paddingTop: "clamp(0.5rem, 1.5vw, 0.75rem)",
+                    paddingBottom: "clamp(0.5rem, 1.5vw, 0.75rem)",
+                    paddingLeft: "clamp(1.5rem, 4vw, 2.5rem)",
+                    paddingRight: "clamp(1.5rem, 4vw, 2.5rem)",
                     justifyContent: "center",
                     alignItems: "center",
-                    gap: "10px",
-                    borderRadius: "8px",
+                    gap: "clamp(0.5rem, 1vw, 0.625rem)",
+                    borderRadius: "clamp(0.5rem, 1vw, 0.75rem)",
                     border: "1px solid #FD5009",
                     background: "rgba(253, 80, 9, 0.2)",
                     color: "#FFF",
                     fontFamily: '"Public Sans", sans-serif',
-                    fontSize: "12px",
+                    fontSize: "clamp(0.75rem, 1.2vw, 0.875rem)",
                     fontStyle: "normal",
                     fontWeight: 500,
                     lineHeight: "normal",
@@ -232,7 +237,7 @@ export const CareersSection = () => {
                 fontStyle: "normal",
                 fontWeight: 400,
                 lineHeight: "1.3",
-                marginBottom: "32px"
+                marginBottom: "clamp(1.5rem, 4vw, 2.5rem)"
               }}
             >
               Application Process
@@ -242,19 +247,19 @@ export const CareersSection = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
-                gap: "56px",
+                gap: "clamp(2.5rem, 6vw, 3.5rem)",
                 alignSelf: "stretch"
               }}
             >
               {steps.map((step, index) => (
                 <div key={step.number}>
-                  <div className="flex gap-6">
+                  <div className="flex" style={{ gap: "clamp(1.5rem, 4vw, 2.5rem)" }}>
                     <div className="flex-shrink-0">
                       <span 
                         style={{
                           color: "#FD5009",
                           fontFamily: '"Public Sans", sans-serif',
-                          fontSize: "28px",
+                          fontSize: "clamp(1.5rem, 3vw, 1.75rem)",
                           fontStyle: "normal",
                           fontWeight: 700,
                           lineHeight: "normal"
@@ -272,7 +277,7 @@ export const CareersSection = () => {
                           fontStyle: "normal",
                           fontWeight: 600,
                           lineHeight: "1.4",
-                          marginBottom: "8px"
+                          marginBottom: "clamp(0.5rem, 1.5vw, 1rem)"
                         }}
                       >
                         {step.title}
@@ -286,7 +291,7 @@ export const CareersSection = () => {
                           fontStyle: "normal",
                           fontWeight: 400,
                           lineHeight: "1.6",
-                          marginBottom: "24px"
+                          marginBottom: "clamp(1.5rem, 4vw, 2.5rem)"
                         }}
                         className="md:text-justify"
                       >
@@ -297,8 +302,8 @@ export const CareersSection = () => {
                   {index < steps.length - 1 && (
                     <div 
                       style={{
-                        marginTop: "24px",
-                        marginBottom: "32px",
+                        marginTop: "clamp(1.5rem, 4vw, 2.5rem)",
+                        marginBottom: "clamp(1.5rem, 4vw, 2.5rem)",
                         height: "1px",
                         background: "rgba(255, 255, 255, 0.1)",
                         width: "100%"

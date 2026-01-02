@@ -75,19 +75,19 @@ export const Navbar = () => {
         boxShadow: isScrolled 
           ? "0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 0 rgba(255, 255, 255, 0.1)" 
           : "none",
-        paddingTop: "8px",
-        paddingBottom: "8px"
+        paddingTop: "clamp(0.375rem, 1vw, 0.5rem)",
+        paddingBottom: "clamp(0.375rem, 1vw, 0.5rem)"
       }}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16 sm:h-18 md:h-20">
+        <div className="flex items-center justify-between" style={{ minHeight: "clamp(3.5rem, 8vw, 5rem)", height: "auto" }}>
           {/* Logo */}
           <a 
             href="#home" 
             className="flex-shrink-0"
             onClick={(e) => handleNavClick(e, "#home")}
           >
-            <img src={logo} alt="RAMA AI" className="w-auto" style={{ height: "clamp(1.5rem, 3vw, 3rem)", maxHeight: "80%", objectFit: "contain" }} />
+            <img src={logo} alt="RAMA AI" className="w-auto" style={{ height: "clamp(1.5rem, 4vw, 3rem)", maxHeight: "80%", objectFit: "contain" }} />
           </a>
 
           {/* Desktop Navigation */}
@@ -133,14 +133,16 @@ export const Navbar = () => {
                 pointerEvents: "none"
               }}
             />
-            <div className="relative z-10 flex items-center gap-0.5 sm:gap-1">
+            <div className="relative z-10 flex items-center" style={{ gap: "clamp(0.125rem, 0.5vw, 0.5rem)" }}>
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="px-2 sm:px-3 md:px-4 py-2 text-xs sm:text-sm font-medium text-white transition-all rounded-full hover:bg-white/5 relative z-10 whitespace-nowrap"
+                  className="font-medium text-white transition-all rounded-full hover:bg-white/5 relative z-10 whitespace-nowrap"
                   style={{
+                    padding: "clamp(0.375rem, 1vw, 0.625rem) clamp(0.5rem, 1.5vw, 1rem)",
+                    fontSize: "clamp(0.75rem, 1.2vw, 0.875rem)",
                     textShadow: "0 1px 3px rgba(0, 0, 0, 0.8), 0 0 8px rgba(255, 255, 255, 0.1)"
                   }}
                 >
@@ -152,36 +154,38 @@ export const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="sm" className="bg-primary text-primary-foreground border-primary hover:bg-primary/90 text-xs sm:text-sm px-3 sm:px-4" asChild>
+            <Button variant="hero" size="sm" className="bg-primary text-primary-foreground border-primary hover:bg-primary/90" asChild style={{ fontSize: "clamp(0.75rem, 1.2vw, 0.875rem)", paddingLeft: "clamp(0.75rem, 1.5vw, 1rem)", paddingRight: "clamp(0.75rem, 1.5vw, 1rem)" }}>
               <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>Contact</a>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
+            style={{ padding: "clamp(0.375rem, 1vw, 0.5rem)", minWidth: "clamp(2.5rem, 6vw, 3rem)", minHeight: "clamp(2.5rem, 6vw, 3rem)" }}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X style={{ width: "clamp(1.25rem, 3vw, 1.5rem)", height: "clamp(1.25rem, 3vw, 1.5rem)" }} /> : <Menu style={{ width: "clamp(1.25rem, 3vw, 1.5rem)", height: "clamp(1.25rem, 3vw, 1.5rem)" }} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-card/95 backdrop-blur-xl border border-border/50 rounded-2xl mt-2 p-4 animate-fade-in">
-            <div className="flex flex-col gap-2">
+          <div className="md:hidden bg-card/95 backdrop-blur-xl border border-border/50 rounded-2xl animate-fade-in" style={{ marginTop: "clamp(0.5rem, 1.5vw, 1rem)", padding: "clamp(1rem, 3vw, 1.5rem)" }}>
+            <div className="flex flex-col" style={{ gap: "clamp(0.5rem, 1.5vw, 1rem)" }}>
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="px-4 py-3 text-foreground hover:bg-secondary rounded-xl transition-colors"
+                  className="text-foreground hover:bg-secondary rounded-xl transition-colors"
+                  style={{ padding: "clamp(0.75rem, 2vw, 1rem) clamp(1rem, 3vw, 1.5rem)", fontSize: "clamp(0.875rem, 1.5vw, 1rem)" }}
                 >
                   {item.label}
                 </a>
               ))}
-              <Button variant="hero" className="mt-2 bg-primary text-primary-foreground border-primary hover:bg-primary/90" asChild>
+              <Button variant="hero" className="bg-primary text-primary-foreground border-primary hover:bg-primary/90" asChild style={{ marginTop: "clamp(0.5rem, 1.5vw, 1rem)" }}>
                 <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>
                   Contact
                 </a>

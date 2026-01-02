@@ -13,7 +13,7 @@ export const WhyUsSection = () => {
     <section className="section-padding bg-background noise-overlay">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-6">
+        <div className="text-center max-w-2xl mx-auto" style={{ marginBottom: "clamp(1.5rem, 4vw, 2.5rem)" }}>
           <h2 
             style={{
               alignSelf: "stretch",
@@ -62,17 +62,19 @@ export const WhyUsSection = () => {
         </div>
 
         {/* Images Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3" style={{ gap: "clamp(1rem, 3vw, 1.5rem)" }}>
           {images.map((image, index) => (
             <div
               key={index}
               style={{
-                borderRadius: "20px",
+                borderRadius: "clamp(1rem, 2vw, 1.25rem)",
                 overflow: "hidden",
                 backgroundColor: "#000",
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center"
+                justifyContent: "center",
+                aspectRatio: "1 / 1",
+                minHeight: "clamp(12rem, 30vw, 20rem)"
               }}
             >
               <img 

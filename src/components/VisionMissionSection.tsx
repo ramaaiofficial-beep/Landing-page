@@ -5,7 +5,7 @@ export const VisionMissionSection = () => {
     <section id="about" className="section-padding bg-background noise-overlay">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-6">
+        <div className="text-center max-w-2xl mx-auto" style={{ marginBottom: "clamp(1.5rem, 4vw, 2.5rem)" }}>
           <h2 
             className="mb-4 px-2"
             style={{
@@ -41,16 +41,16 @@ export const VisionMissionSection = () => {
         </div>
 
         {/* Vision & Mission Cards */}
-        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-start">
+        <div className="grid md:grid-cols-2 items-start" style={{ gap: "clamp(1.5rem, 4vw, 2.5rem)" }}>
           {/* Vision */}
           <div className="text-center">
-            <div className="relative mx-auto w-24 h-24 mb-6">
+            <div className="relative mx-auto mb-6" style={{ width: "clamp(4rem, 8vw, 6rem)", height: "clamp(4rem, 8vw, 6rem)" }}>
               {/* Animated rings */}
               <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-ping" style={{ animationDuration: "3s" }} />
               <div className="absolute inset-2 rounded-full border-2 border-primary/50 animate-ping" style={{ animationDuration: "3s", animationDelay: "0.5s" }} />
               <div className="absolute inset-4 rounded-full border-2 border-primary/70 animate-ping" style={{ animationDuration: "3s", animationDelay: "1s" }} />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-10 h-10 bg-primary rounded-full animate-pulse" />
+                <div className="bg-primary rounded-full animate-pulse" style={{ width: "clamp(2rem, 4vw, 2.5rem)", height: "clamp(2rem, 4vw, 2.5rem)" }} />
               </div>
             </div>
             <h3 
@@ -62,9 +62,9 @@ export const VisionMissionSection = () => {
                 fontSize: "clamp(1.25rem, 2.5vw, 1.625rem)",
                 fontStyle: "normal",
                 fontWeight: 200,
-                lineHeight: "1.3"
+                lineHeight: "1.3",
+                marginBottom: "clamp(1rem, 2.5vw, 1.5rem)"
               }}
-              className="mb-4"
             >
               Our Vision
             </h3>
@@ -88,7 +88,7 @@ export const VisionMissionSection = () => {
 
           {/* Mission */}
           <div className="text-center">
-            <div className="relative mx-auto w-24 h-24 mb-6">
+            <div className="relative mx-auto mb-6" style={{ width: "clamp(4rem, 8vw, 6rem)", height: "clamp(4rem, 8vw, 6rem)" }}>
               {/* Smooth floating animation for pyramid */}
               <div className="absolute inset-0 flex items-end justify-center animate-float">
                 <div className="relative">
@@ -126,9 +126,11 @@ export const VisionMissionSection = () => {
                 fontSize: "clamp(1.25rem, 2.5vw, 1.625rem)",
                 fontStyle: "normal",
                 fontWeight: 200,
-                lineHeight: "1.3"
+                lineHeight: "1.3",
+                marginBottom: "clamp(1rem, 2.5vw, 1.5rem)",
+                marginLeft: "auto",
+                marginRight: "auto"
               }}
-              className="mb-4 mx-auto"
             >
               Our Mission
             </h3>

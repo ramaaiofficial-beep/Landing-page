@@ -50,11 +50,11 @@ export const Footer = () => {
         }}
       />
 
-      <div className="container-custom relative z-10 py-8">
+      <div className="container-custom relative z-10" style={{ paddingTop: "clamp(2rem, 5vw, 3rem)", paddingBottom: "clamp(2rem, 5vw, 3rem)" }}>
         {/* Bottom Bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
+        <div className="flex flex-col sm:flex-row items-center justify-between" style={{ paddingTop: "clamp(1.5rem, 4vw, 2.5rem)", gap: "clamp(1rem, 2.5vw, 1.5rem)" }}>
           {/* Left: Legal Links */}
-          <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center sm:justify-start order-2 sm:order-1">
+          <div className="flex flex-wrap justify-center sm:justify-start order-2 sm:order-1" style={{ gap: "clamp(0.5rem, 1.5vw, 1rem)" }}>
             {footerLinks.legal.map((link, index) => (
               <a
                 key={link.label}
@@ -72,24 +72,26 @@ export const Footer = () => {
           </p>
           
           {/* Right: Social Media Icons */}
-          <div className="flex gap-3 sm:gap-4 order-3">
+          <div className="flex order-3" style={{ gap: "clamp(0.75rem, 2vw, 1.5rem)" }}>
             <a
               href="https://www.instagram.com/ramaai.in?igsh=eGo1b2x4d3AwbGY4&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="w-10 h-10 bg-muted/50 rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+              className="bg-muted/50 rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+              style={{ width: "clamp(2.5rem, 5vw, 3rem)", height: "clamp(2.5rem, 5vw, 3rem)" }}
             >
-              <Instagram className="w-4 h-4" />
+              <Instagram style={{ width: "clamp(1rem, 2vw, 1.25rem)", height: "clamp(1rem, 2vw, 1.25rem)" }} />
             </a>
             <a
               href="https://x.com/ramaaiin?s=21"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="X"
-              className="w-10 h-10 bg-muted/50 rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+              className="bg-muted/50 rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+              style={{ width: "clamp(2.5rem, 5vw, 3rem)", height: "clamp(2.5rem, 5vw, 3rem)" }}
             >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <svg style={{ width: "clamp(1rem, 2vw, 1.25rem)", height: "clamp(1rem, 2vw, 1.25rem)" }} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
             </a>
@@ -98,9 +100,10 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="w-10 h-10 bg-muted/50 rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+              className="bg-muted/50 rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+              style={{ width: "clamp(2.5rem, 5vw, 3rem)", height: "clamp(2.5rem, 5vw, 3rem)" }}
             >
-              <Linkedin className="w-4 h-4" />
+              <Linkedin style={{ width: "clamp(1rem, 2vw, 1.25rem)", height: "clamp(1rem, 2vw, 1.25rem)" }} />
             </a>
           </div>
         </div>

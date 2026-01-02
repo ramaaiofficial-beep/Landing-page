@@ -52,7 +52,7 @@ export const IndustriesSection = () => {
     <section id="industries" className="section-padding bg-background noise-overlay">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10">
+        <div className="text-center max-w-2xl mx-auto" style={{ marginBottom: "clamp(2rem, 5vw, 3rem)" }}>
           <h2 
             style={{
               alignSelf: "stretch",
@@ -87,17 +87,18 @@ export const IndustriesSection = () => {
         </div>
 
         {/* Industry Cards */}
-        <div className="space-y-8">
+        <div style={{ display: "flex", flexDirection: "column", gap: "clamp(2rem, 5vw, 3rem)" }}>
           {industries.map((industry, index) => (
             <div
               key={industry.title}
               className="glass-card overflow-hidden"
             >
-              <div className={`grid lg:grid-cols-2 ${industry.reverse ? "lg:flex-row-reverse" : ""} gap-0`}>
+              <div className={`grid lg:grid-cols-2 ${industry.reverse ? "lg:flex-row-reverse" : ""}`} style={{ gap: 0 }}>
                 {/* Content */}
                 <div 
-                  className={`p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col justify-center relative ${industry.reverse ? "lg:order-2" : ""}`}
+                  className={`flex flex-col justify-center relative ${industry.reverse ? "lg:order-2" : ""}`}
                   style={{
+                    padding: "clamp(1.5rem, 5vw, 3rem)",
                     backgroundImage: `url(${heroBg})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
@@ -108,8 +109,8 @@ export const IndustriesSection = () => {
                   <div className="absolute inset-0 bg-black/30" />
                   
                   <div className="relative z-10">
-                    <div className="inline-flex items-center justify-center w-10 h-10 bg-primary/10 rounded-xl mb-4">
-                      <MessageSquare className="w-5 h-5 text-primary" />
+                    <div className="inline-flex items-center justify-center bg-primary/10 rounded-xl" style={{ width: "clamp(2.5rem, 5vw, 3rem)", height: "clamp(2.5rem, 5vw, 3rem)", marginBottom: "clamp(1rem, 2.5vw, 1.5rem)", borderRadius: "clamp(0.5rem, 1vw, 0.75rem)" }}>
+                      <MessageSquare className="text-primary" style={{ width: "clamp(1.25rem, 2.5vw, 1.5rem)", height: "clamp(1.25rem, 2.5vw, 1.5rem)" }} />
                     </div>
                     <h3 
                       style={{
@@ -120,7 +121,7 @@ export const IndustriesSection = () => {
                         fontStyle: "normal",
                         fontWeight: 400,
                         lineHeight: "1.3",
-                        marginBottom: "16px",
+                        marginBottom: "clamp(1rem, 2.5vw, 1.5rem)",
                         textShadow: "0 2px 8px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.8)",
                         letterSpacing: "0.01em"
                       }}
@@ -137,7 +138,7 @@ export const IndustriesSection = () => {
                         fontStyle: "normal",
                         fontWeight: 400,
                         lineHeight: "1.6",
-                        marginBottom: "24px",
+                        marginBottom: "clamp(1.5rem, 4vw, 2.5rem)",
                         textShadow: "0 1px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.6)",
                         letterSpacing: "0.01em"
                       }}
@@ -146,8 +147,11 @@ export const IndustriesSection = () => {
                       {industry.description}
                     </p>
                     <ul 
-                      className="space-y-2 mb-8"
                       style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "clamp(0.5rem, 1.5vw, 1rem)",
+                        marginBottom: "clamp(2rem, 5vw, 3rem)",
                         color: "#777777",
                         fontFamily: '"Public Sans", sans-serif',
                         fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)",
@@ -159,8 +163,8 @@ export const IndustriesSection = () => {
                       }}
                     >
                       {industry.features.map((feature) => (
-                        <li key={feature} className="flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+                        <li key={feature} className="flex items-center" style={{ gap: "clamp(0.5rem, 1.5vw, 1rem)" }}>
+                          <span className="bg-primary rounded-full" style={{ width: "clamp(0.375rem, 0.75vw, 0.5rem)", height: "clamp(0.375rem, 0.75vw, 0.5rem)", minWidth: "clamp(0.375rem, 0.75vw, 0.5rem)", minHeight: "clamp(0.375rem, 0.75vw, 0.5rem)" }} />
                           {feature}
                         </li>
                       ))}
@@ -169,7 +173,7 @@ export const IndustriesSection = () => {
                 </div>
 
                 {/* Image */}
-                <div className={`relative h-64 sm:h-80 md:h-96 lg:h-auto min-h-[300px] ${industry.reverse ? "lg:order-1" : ""}`}>
+                <div className={`relative ${industry.reverse ? "lg:order-1" : ""}`} style={{ minHeight: "clamp(18.75rem, 40vw, 25rem)", height: "100%", aspectRatio: "4 / 3" }}>
                   {/* Background images replacing gradient overlays */}
                   {index === 0 && (
                     <div 

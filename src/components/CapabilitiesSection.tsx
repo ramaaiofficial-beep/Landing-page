@@ -29,7 +29,7 @@ export const CapabilitiesSection = () => {
     <section id="capabilities" className="section-padding bg-background noise-overlay relative">
       <div className="container-custom relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-6">
+        <div className="text-center max-w-2xl mx-auto" style={{ marginBottom: "clamp(1.5rem, 4vw, 2.5rem)" }}>
           <h2 
             style={{
               alignSelf: "stretch",
@@ -79,7 +79,7 @@ export const CapabilitiesSection = () => {
         </div>
 
         {/* Capabilities Grid */}
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2" style={{ gap: "clamp(1rem, 3vw, 1.5rem)" }}>
           {capabilities.map((capability, index) => {
             // Card 1: Dark gradient (red/orange to dark)
             // Card 2: Background image only (no gradient)
@@ -89,9 +89,10 @@ export const CapabilitiesSection = () => {
             return (
               <div
                 key={capability.title}
-                className="p-6 sm:p-8 group relative overflow-hidden rounded-2xl cursor-pointer"
+                className="group relative overflow-hidden rounded-2xl cursor-pointer"
                 style={{ 
                   animationDelay: `${index * 0.1}s`,
+                  padding: "clamp(1.5rem, 4vw, 2.5rem)",
                   background: isGradientCard 
                     ? "linear-gradient(135deg, rgba(139, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.9) 100%)"
                     : index === 2
@@ -99,7 +100,8 @@ export const CapabilitiesSection = () => {
                     : "rgba(30, 30, 30, 0.8)", // Base dark background for cards 0 and 3
                   border: "1px solid rgba(255, 255, 255, 0.1)",
                   transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-                  transform: "translateY(0) scale(1)"
+                  transform: "translateY(0) scale(1)",
+                  borderRadius: "clamp(1rem, 2vw, 1.25rem)"
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = "translateY(-8px) scale(1.02)";
@@ -144,8 +146,8 @@ export const CapabilitiesSection = () => {
               
               <div className="relative z-10">
                 {/* Icons */}
-                <div className="mb-6">
-                  <capability.icon className="w-12 h-12 text-primary" />
+                <div style={{ marginBottom: "clamp(1.5rem, 4vw, 2.5rem)" }}>
+                  <capability.icon className="text-primary" style={{ width: "clamp(2.5rem, 5vw, 3rem)", height: "clamp(2.5rem, 5vw, 3rem)" }} />
                 </div>
 
                 <div>
@@ -157,7 +159,7 @@ export const CapabilitiesSection = () => {
                       fontStyle: "normal",
                       fontWeight: 600,
                       lineHeight: "1.3",
-                      marginBottom: "8px"
+                      marginBottom: "clamp(0.5rem, 1.5vw, 1rem)"
                     }}
                   >
                     {capability.title}

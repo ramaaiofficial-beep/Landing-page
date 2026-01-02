@@ -84,7 +84,7 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="section-padding bg-background noise-overlay">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16">
+        <div className="grid lg:grid-cols-2" style={{ gap: "clamp(1.5rem, 5vw, 4rem)" }}>
           {/* Contact Info */}
           <div>
             <h2 
@@ -102,7 +102,7 @@ export const ContactSection = () => {
               Let's Connect
             </h2>
             <p 
-              className="mb-8 sm:mb-10 md:text-justify text-left"
+              className="md:text-justify text-left"
               style={{
                 alignSelf: "stretch",
                 color: "#777777",
@@ -111,17 +111,18 @@ export const ContactSection = () => {
                 fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)",
                 fontStyle: "normal",
                 fontWeight: 400,
-                lineHeight: "1.6"
+                lineHeight: "1.6",
+                marginBottom: "clamp(2rem, 5vw, 3rem)"
               }}
             >
               Ready to transform the future of human-AI interaction? We'd love to hear from you.
             </p>
 
-            <div className="space-y-8">
+            <div style={{ display: "flex", flexDirection: "column", gap: "clamp(2rem, 5vw, 3rem)" }}>
               {contactInfo.map((info) => (
-                <div key={info.title} className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                    <info.icon className="w-5 h-5 text-primary" />
+                <div key={info.title} className="flex" style={{ gap: "clamp(1rem, 2.5vw, 1.5rem)" }}>
+                  <div className="flex-shrink-0 bg-primary/10 rounded-xl flex items-center justify-center" style={{ width: "clamp(2.5rem, 5vw, 3rem)", height: "clamp(2.5rem, 5vw, 3rem)", borderRadius: "clamp(0.5rem, 1vw, 0.75rem)" }}>
+                    <info.icon className="text-primary" style={{ width: "clamp(1.25rem, 2.5vw, 1.5rem)", height: "clamp(1.25rem, 2.5vw, 1.5rem)" }} />
                   </div>
                   <div>
                     <h3 
@@ -165,7 +166,7 @@ export const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="glass-card p-8">
+          <div className="glass-card" style={{ padding: "clamp(1.5rem, 4vw, 2.5rem)" }}>
             <h3 
               className="mb-2"
               style={{
@@ -180,9 +181,9 @@ export const ContactSection = () => {
             >
               Get in touch
             </h3>
-            <p className="text-muted-foreground mb-6 text-sm">Send us a message</p>
+            <p className="text-muted-foreground text-sm" style={{ marginBottom: "clamp(1.5rem, 4vw, 2.5rem)" }}>Send us a message</p>
 
-            <form onSubmit={handleSubmit} className="space-y-4 w-full">
+            <form onSubmit={handleSubmit} className="w-full" style={{ display: "flex", flexDirection: "column", gap: "clamp(1rem, 2.5vw, 1.5rem)" }}>
               <div>
                 <label htmlFor="name" className="block text-sm text-muted-foreground mb-2">
                   Name
