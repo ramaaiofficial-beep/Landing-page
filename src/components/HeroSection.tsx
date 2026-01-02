@@ -37,7 +37,7 @@ export const HeroSection = () => {
             }}
           />
           
-          <div className="relative z-10">
+          <div className="relative z-10" style={{ marginTop: "clamp(-2rem, -3vw, -1.5rem)" }}>
             {/* Badge */}
             <div 
               className="inline-flex items-center gap-2 rounded-full animate-fade-up relative overflow-hidden"
@@ -96,7 +96,7 @@ export const HeroSection = () => {
                 fontStyle: "normal",
                 fontWeight: 300,
                 lineHeight: "1.1",
-                marginBottom: "clamp(1rem, 2.5vw, 1.5rem)",
+                marginBottom: "0",
                 paddingLeft: "clamp(0.5rem, 2vw, 1rem)",
                 paddingRight: "clamp(0.5rem, 2vw, 1rem)"
               }}
@@ -120,7 +120,7 @@ export const HeroSection = () => {
             </h1>
 
             {/* Subheadline */}
-            <div className="rounded-xl max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s", padding: "clamp(1rem, 2.5vw, 1.5rem)", marginBottom: "clamp(1.5rem, 3.5vw, 2.5rem)" }}>
+            <div className="rounded-xl max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s", paddingTop: "0", paddingBottom: "clamp(0.5rem, 1.5vw, 1rem)", paddingLeft: "clamp(1rem, 2.5vw, 1.5rem)", paddingRight: "clamp(1rem, 2.5vw, 1.5rem)", marginTop: "clamp(0rem, 0.5vw, 0.5rem)", marginBottom: "clamp(0.25rem, 1vw, 0.75rem)" }}>
               <p 
                 style={{
                   color: "#FAFAFA",
