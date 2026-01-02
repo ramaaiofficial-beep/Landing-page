@@ -80,14 +80,14 @@ export const Navbar = () => {
       }}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between relative" style={{ minHeight: "clamp(3.5rem, 8vw, 5rem)", height: "auto" }}>
+        <div className="flex items-center justify-between relative navbar-container" style={{ minHeight: "clamp(3.5rem, 8vw, 5rem)", height: "auto" }}>
           {/* Logo */}
           <a 
             href="#home" 
             className="flex-shrink-0"
             onClick={(e) => handleNavClick(e, "#home")}
           >
-            <img src={logo} alt="RAMA AI" className="w-auto" style={{ height: "clamp(1.5rem, 4vw, 3rem)", maxHeight: "80%", objectFit: "contain" }} />
+            <img src={logo} alt="RAMA AI" className="w-auto navbar-logo" style={{ height: "clamp(1.5rem, 4vw, 3rem)", maxHeight: "80%", objectFit: "contain" }} />
           </a>
 
           {/* Desktop Navigation */}

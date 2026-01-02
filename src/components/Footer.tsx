@@ -50,16 +50,16 @@ export const Footer = () => {
         }}
       />
 
-      <div className="container-custom relative z-10" style={{ paddingTop: "clamp(1.5rem, 3vw, 2rem)", paddingBottom: "clamp(2rem, 4vw, 2.5rem)" }}>
+      <div className="container-custom relative z-10" style={{ paddingTop: "clamp(1rem, 2.5vw, 1.5rem)", paddingBottom: "clamp(1rem, 2.5vw, 1.5rem)" }}>
         {/* Bottom Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between" style={{ gap: "clamp(1rem, 2.5vw, 1.5rem)" }}>
+        <div className="flex flex-col sm:flex-row items-center justify-between sm:items-center" style={{ gap: "clamp(0.75rem, 2vw, 1.25rem)" }}>
           {/* Left: Legal Links */}
-          <div className="flex flex-wrap justify-center sm:justify-start order-2 sm:order-1" style={{ gap: "clamp(0.5rem, 1.5vw, 1rem)" }}>
+          <div className="flex flex-nowrap justify-center sm:justify-start order-2 sm:order-1 items-center self-center" style={{ gap: "clamp(0.5rem, 1.5vw, 1rem)" }}>
             {footerLinks.legal.map((link, index) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-muted-foreground text-xs sm:text-sm hover:text-primary transition-colors"
+                className="text-muted-foreground text-xs sm:text-sm hover:text-primary transition-colors whitespace-nowrap"
               >
                 {link.label}
               </a>
@@ -67,12 +67,14 @@ export const Footer = () => {
           </div>
           
           {/* Center: Copyright */}
-          <p className="text-muted-foreground text-xs sm:text-sm text-center flex-1 order-1 sm:order-2">
-            © 2025 RAMA AI. All rights reserved.
-          </p>
+          <div className="flex items-center justify-center flex-1 order-1 sm:order-2 self-center">
+            <p className="text-muted-foreground text-xs sm:text-sm text-center w-full leading-tight">
+              © 2025 RAMA AI. All rights reserved.
+            </p>
+          </div>
           
           {/* Right: Social Media Icons */}
-          <div className="flex order-3" style={{ gap: "clamp(0.75rem, 2vw, 1.5rem)" }}>
+          <div className="flex items-center justify-center order-3 self-center" style={{ gap: "clamp(0.75rem, 2vw, 1.5rem)" }}>
             <a
               href="https://www.instagram.com/ramaai.in?igsh=eGo1b2x4d3AwbGY4&utm_source=qr"
               target="_blank"
