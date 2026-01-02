@@ -23,7 +23,7 @@ export const HeroSection = () => {
         <div className="absolute bottom-1/4 right-1/4 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ width: "clamp(10rem, 25vw, 20rem)", height: "clamp(10rem, 25vw, 20rem)", animationDelay: "1s" }} />
       </div>
 
-      <div className="container-custom relative z-10" style={{ paddingTop: "clamp(4rem, 8vw, 6rem)", paddingBottom: "clamp(4rem, 8vw, 6rem)" }}>
+      <div className="container-custom relative z-10" style={{ paddingTop: "clamp(3rem, 6vw, 4.5rem)", paddingBottom: "clamp(3rem, 6vw, 4.5rem)" }}>
         <div className="max-w-4xl mx-auto text-center relative" style={{ paddingLeft: "clamp(0.5rem, 2vw, 1rem)", paddingRight: "clamp(0.5rem, 2vw, 1rem)" }}>
           {/* Red Gridlines Pattern */}
           <div 
@@ -37,13 +37,13 @@ export const HeroSection = () => {
             }}
           />
           
-          <div className="relative z-10" style={{ marginTop: "clamp(-2rem, -3vw, -1.5rem)" }}>
+          <div className="relative z-10" style={{ display: "flex", flexDirection: "column", gap: "clamp(0.75rem, 2vw, 1.5rem)", alignItems: "center", marginTop: "clamp(-2rem, -4vw, -1.5rem)" }}>
             {/* Badge */}
             <div 
               className="inline-flex items-center gap-2 rounded-full animate-fade-up relative overflow-hidden"
               style={{
                 padding: "clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 3vw, 1.5rem)",
-                marginBottom: "clamp(1.5rem, 4vw, 2.5rem)",
+                marginTop: "clamp(4rem, 7vw, 5rem)",
                 background: "linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(42, 15, 8, 0.5) 50%, rgba(0, 0, 0, 0.6) 100%)",
                 backdropFilter: "blur(24px) saturate(180%)",
                 WebkitBackdropFilter: "blur(24px) saturate(180%)",
@@ -96,7 +96,6 @@ export const HeroSection = () => {
                 fontStyle: "normal",
                 fontWeight: 300,
                 lineHeight: "1.1",
-                marginBottom: "0",
                 paddingLeft: "clamp(0.5rem, 2vw, 1rem)",
                 paddingRight: "clamp(0.5rem, 2vw, 1rem)"
               }}
@@ -120,7 +119,7 @@ export const HeroSection = () => {
             </h1>
 
             {/* Subheadline */}
-            <div className="rounded-xl max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s", paddingTop: "0", paddingBottom: "clamp(0.5rem, 1.5vw, 1rem)", paddingLeft: "clamp(1rem, 2.5vw, 1.5rem)", paddingRight: "clamp(1rem, 2.5vw, 1.5rem)", marginTop: "clamp(0rem, 0.5vw, 0.5rem)", marginBottom: "clamp(0.25rem, 1vw, 0.75rem)" }}>
+            <div className="rounded-xl max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s", padding: "clamp(1rem, 2.5vw, 1.5rem)", marginTop: "clamp(-1.5rem, -3vw, -1rem)" }}>
               <p 
                 style={{
                   color: "#FAFAFA",
@@ -139,7 +138,7 @@ export const HeroSection = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center animate-fade-up" style={{ animationDelay: "0.3s", gap: "clamp(0.75rem, 2vw, 1rem)", paddingLeft: "clamp(1rem, 2vw, 0)", paddingRight: "clamp(1rem, 2vw, 0)" }}>
+            <div className="flex flex-col sm:flex-row items-center justify-center animate-fade-up" style={{ animationDelay: "0.3s", gap: "clamp(0.75rem, 2vw, 1rem)", paddingLeft: "clamp(1rem, 2vw, 0)", paddingRight: "clamp(1rem, 2vw, 0)", width: "100%", marginTop: "clamp(-2rem, -4vw, -1.5rem)" }}>
               <Button variant="hero" size="default" asChild className="w-full sm:w-auto">
                 <a 
                   href="#industries"
