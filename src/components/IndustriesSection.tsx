@@ -52,7 +52,7 @@ export const IndustriesSection = () => {
     <section id="industries" className="section-padding bg-background noise-overlay">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto" style={{ marginBottom: "clamp(2rem, 5vw, 3rem)" }}>
+        <div className="text-center max-w-2xl mx-auto" style={{ marginBottom: "clamp(1.5rem, 4vw, 2.5rem)" }}>
           <h2 
             style={{
               alignSelf: "stretch",
@@ -62,8 +62,7 @@ export const IndustriesSection = () => {
               fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)",
               fontStyle: "normal",
               fontWeight: 500,
-              lineHeight: "1.2",
-              marginBottom: "16px"
+              lineHeight: "1.2"
             }}
             className="mb-4 px-2"
           >
@@ -151,7 +150,7 @@ export const IndustriesSection = () => {
                         display: "flex",
                         flexDirection: "column",
                         gap: "clamp(0.5rem, 1.5vw, 1rem)",
-                        marginBottom: "clamp(2rem, 5vw, 3rem)",
+                        marginBottom: "clamp(1.5rem, 4vw, 2.5rem)",
                         color: "#777777",
                         fontFamily: '"Public Sans", sans-serif',
                         fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)",

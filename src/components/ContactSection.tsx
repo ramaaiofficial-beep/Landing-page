@@ -112,7 +112,7 @@ export const ContactSection = () => {
                 fontStyle: "normal",
                 fontWeight: 400,
                 lineHeight: "1.6",
-                marginBottom: "clamp(2rem, 5vw, 3rem)"
+                marginBottom: "clamp(1.5rem, 4vw, 2.5rem)"
               }}
             >
               Ready to transform the future of human-AI interaction? We'd love to hear from you.

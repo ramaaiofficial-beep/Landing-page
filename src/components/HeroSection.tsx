@@ -26,7 +26,7 @@ export const HeroSection = () => {
         <div className="absolute bottom-1/4 right-1/4 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ width: "clamp(10rem, 25vw, 20rem)", height: "clamp(10rem, 25vw, 20rem)", animationDelay: "1s" }} />
       </div>
 
-      <div className="container-custom relative z-10" style={{ paddingTop: "0", paddingBottom: "clamp(3rem, 6vw, 4.5rem)" }}>
+      <div className="container-custom relative z-10 hero-container" style={{ paddingTop: "0", paddingBottom: "clamp(3rem, 6vw, 4.5rem)" }}>
         <div className="max-w-4xl mx-auto text-center relative" style={{ paddingLeft: "clamp(0.5rem, 2vw, 1rem)", paddingRight: "clamp(0.5rem, 2vw, 1rem)" }}>
           {/* Red Gridlines Pattern */}
           <div 
@@ -40,7 +40,7 @@ export const HeroSection = () => {
             }}
           />
           
-          <div className="relative z-10" style={{ display: "flex", flexDirection: "column", gap: "clamp(0.75rem, 2vw, 1.5rem)", alignItems: "center", marginTop: "clamp(-13rem, -26vw, -12.5rem)" }}>
+          <div className="relative z-10 hero-content" style={{ display: "flex", flexDirection: "column", gap: "clamp(0.75rem, 2vw, 1.5rem)", alignItems: "center", marginTop: "clamp(-13rem, -26vw, -12.5rem)" }}>
             {/* Badge */}
             <div 
               className="inline-flex items-center gap-2 rounded-full animate-fade-up relative overflow-hidden"

@@ -536,6 +536,17 @@
     padding-top: clamp(3.5rem, 8vw, 5rem);
   }
 
+  /* Restore original hero section positioning on mobile */
+  @media (max-width: 767px) {
+    .hero-container {
+      padding-top: clamp(6rem, 12vw, 8rem) !important;
+    }
+    
+    .hero-content {
+      margin-top: clamp(-2rem, -4vw, -1.5rem) !important;
+    }
+  }
+
   /* Add margin-top to VisionMissionSection grid on mobile only */
   @media (max-width: 767px) {
     .vision-mission-grid {
