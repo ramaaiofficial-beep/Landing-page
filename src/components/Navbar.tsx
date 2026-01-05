@@ -36,7 +36,11 @@ export const Navbar = () => {
       // If on home page, just scroll to section
       const element = document.getElementById(targetId);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        // Use scrollIntoView with block: 'start' and let CSS scroll-padding-top handle the offset
+        element.scrollIntoView({ 
+          behavior: "smooth",
+          block: "start"
+        });
       }
     } else {
       // If on different page, navigate to home then scroll
@@ -52,7 +56,11 @@ export const Navbar = () => {
       setTimeout(() => {
         const element = document.getElementById(targetId);
         if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+          // Use scrollIntoView with block: 'start' and let CSS scroll-padding-top handle the offset
+          element.scrollIntoView({ 
+            behavior: "smooth",
+            block: "start"
+          });
         }
         // Clear the state to prevent re-scrolling on re-renders
         window.history.replaceState({}, document.title);
@@ -62,8 +70,20 @@ export const Navbar = () => {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      className="fixed top-0 left-0 right-0 z-50"
       style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        width: "100%",
+        margin: 0,
+        marginTop: 0,
+        marginBottom: 0,
+        marginLeft: 0,
+        marginRight: 0,
+        transform: "none",
+        willChange: "background-color, backdrop-filter, border-color, box-shadow",
         background: isScrolled 
           ? "rgba(0, 0, 0, 0.4)" 
           : "transparent",
@@ -76,7 +96,11 @@ export const Navbar = () => {
           ? "0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 0 rgba(255, 255, 255, 0.1)" 
           : "none",
         paddingTop: "clamp(0.375rem, 1vw, 0.5rem)",
-        paddingBottom: "clamp(0.375rem, 1vw, 0.5rem)"
+        paddingBottom: "clamp(0.375rem, 1vw, 0.5rem)",
+        paddingLeft: 0,
+        paddingRight: 0,
+        zIndex: 9999,
+        transition: "background-color 0.3s, backdrop-filter 0.3s, border-color 0.3s, box-shadow 0.3s"
       }}
     >
       <div className="container-custom">
@@ -84,7 +108,7 @@ export const Navbar = () => {
           {/* Logo */}
           <a 
             href="#home" 
-            className="flex-shrink-0"
+            className="flex flex-wrap flex-shrink-0"
             onClick={(e) => handleNavClick(e, "#home")}
           >
             <img src={logo} alt="RAMA AI" className="w-auto navbar-logo" style={{ height: "clamp(1.5rem, 4vw, 3rem)", maxHeight: "80%", objectFit: "contain" }} />

@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import heroBg from "@/assets/hero section bg.png";
+import { Navbar } from "@/components/Navbar";
 
 export const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Fixed Navbar at top of hero section - will not move */}
+      <Navbar />
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -23,7 +26,7 @@ export const HeroSection = () => {
         <div className="absolute bottom-1/4 right-1/4 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ width: "clamp(10rem, 25vw, 20rem)", height: "clamp(10rem, 25vw, 20rem)", animationDelay: "1s" }} />
       </div>
 
-      <div className="container-custom relative z-10" style={{ paddingTop: "clamp(3rem, 6vw, 4.5rem)", paddingBottom: "clamp(3rem, 6vw, 4.5rem)" }}>
+      <div className="container-custom relative z-10" style={{ paddingTop: "clamp(6rem, 12vw, 8rem)", paddingBottom: "clamp(3rem, 6vw, 4.5rem)" }}>
         <div className="max-w-4xl mx-auto text-center relative" style={{ paddingLeft: "clamp(0.5rem, 2vw, 1rem)", paddingRight: "clamp(0.5rem, 2vw, 1rem)" }}>
           {/* Red Gridlines Pattern */}
           <div 
