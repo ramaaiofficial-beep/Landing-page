@@ -539,11 +539,11 @@
   /* Restore original hero section positioning on mobile */
   @media (max-width: 767px) {
     .hero-container {
-      padding-top: clamp(6rem, 12vw, 8rem) !important;
+      padding-top: clamp(4rem, 10vw, 6rem) !important;
     }
     
     .hero-content {
-      margin-top: clamp(-2rem, -4vw, -1.5rem) !important;
+      margin-top: clamp(0rem, 2vw, 1rem) !important;
     }
   }
 
