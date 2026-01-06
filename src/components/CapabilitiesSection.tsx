@@ -81,7 +81,7 @@ export const CapabilitiesSection = () => {
         </div>
 
         {/* Capabilities Grid */}
-        <div className="grid sm:grid-cols-1 md:grid-cols-2" style={{ gap: "clamp(1rem, 3vw, 1.5rem)" }}>
+        <div className="grid sm:grid-cols-1 md:grid-cols-2" style={{ gap: "clamp(0.75rem, 2vw, 1rem)" }}>
           {capabilities.map((capability, index) => {
             // Card 1: Dark gradient (red/orange to dark)
             // Card 2: Background image only (no gradient)
@@ -161,7 +161,7 @@ export const CapabilitiesSection = () => {
                       fontStyle: "normal",
                       fontWeight: 600,
                       lineHeight: "1.3",
-                      marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
+                      marginBottom: "clamp(0.25rem, 0.8vw, 0.5rem)"
                     }}
                   >
                     {capability.title}
@@ -175,7 +175,7 @@ export const CapabilitiesSection = () => {
                       fontStyle: "normal",
                       fontWeight: 400,
                       lineHeight: "1.6",
-                      marginTop: 0
+                      marginTop: "-0.25rem"
                     }}
                     className="md:text-justify"
                   >
