@@ -46,13 +46,13 @@ export const VisionMissionSection = () => {
         <div className="grid md:grid-cols-2 items-start vision-mission-grid" style={{ gap: "clamp(1.5rem, 4vw, 2.5rem)" }}>
           {/* Vision */}
           <div className="text-center">
-            <div className="relative mx-auto mb-6" style={{ width: "clamp(4rem, 8vw, 6rem)", height: "clamp(4rem, 8vw, 6rem)" }}>
+            <div className="relative mx-auto mb-6" style={{ width: "clamp(2.5rem, 5vw, 3.5rem)", height: "clamp(2.5rem, 5vw, 3.5rem)" }}>
               {/* Animated rings */}
               <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-ping" style={{ animationDuration: "3s" }} />
               <div className="absolute inset-2 rounded-full border-2 border-primary/50 animate-ping" style={{ animationDuration: "3s", animationDelay: "0.5s" }} />
               <div className="absolute inset-4 rounded-full border-2 border-primary/70 animate-ping" style={{ animationDuration: "3s", animationDelay: "1s" }} />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-primary rounded-full animate-pulse" style={{ width: "clamp(2rem, 4vw, 2.5rem)", height: "clamp(2rem, 4vw, 2.5rem)" }} />
+                <div className="bg-primary rounded-full animate-pulse" style={{ width: "clamp(1rem, 2vw, 1.5rem)", height: "clamp(1rem, 2vw, 1.5rem)" }} />
               </div>
             </div>
             <h3 
@@ -91,24 +91,24 @@ export const VisionMissionSection = () => {
 
           {/* Mission */}
           <div className="text-center mission-section">
-            <div className="relative mx-auto mb-6" style={{ width: "clamp(4rem, 8vw, 6rem)", height: "clamp(4rem, 8vw, 6rem)" }}>
+            <div className="relative mx-auto mb-6" style={{ width: "clamp(2.5rem, 5vw, 3.5rem)", height: "clamp(2.5rem, 5vw, 3.5rem)" }}>
               {/* Smooth floating animation for pyramid */}
               <div className="absolute inset-0 flex items-end justify-center animate-float">
                 <div className="relative">
-                  <div className="w-20 h-4 bg-primary/20 rounded-t-sm" />
-                  <div className="w-16 h-4 bg-primary/30 rounded-t-sm mx-auto -mt-1" />
-                  <div className="w-12 h-4 bg-primary/40 rounded-t-sm mx-auto -mt-1" />
-                  <div className="w-8 h-4 bg-primary/50 rounded-t-sm mx-auto -mt-1" />
-                  <div className="w-4 h-4 bg-primary/60 rounded-t-sm mx-auto -mt-1" />
+                  <div className="w-16 h-3 bg-primary/20 rounded-t-sm" />
+                  <div className="w-12 h-3 bg-primary/30 rounded-t-sm mx-auto -mt-1" />
+                  <div className="w-10 h-3 bg-primary/40 rounded-t-sm mx-auto -mt-1" />
+                  <div className="w-6 h-3 bg-primary/50 rounded-t-sm mx-auto -mt-1" />
+                  <div className="w-3 h-3 bg-primary/60 rounded-t-sm mx-auto -mt-1" />
                   {/* Flag with gentle sway */}
                   <div 
-                    className="absolute -top-8 left-1/2 transform -translate-x-1/2"
+                    className="absolute -top-6 left-1/2 transform -translate-x-1/2"
                     style={{
                       animation: "sway 3s ease-in-out infinite"
                     }}
                   >
-                    <div className="w-0.5 h-10 bg-primary" />
-                    <div className="absolute top-0 left-0.5 w-4 h-3 bg-primary rounded-sm" />
+                    <div className="w-0.5 h-8 bg-primary" />
+                    <div className="absolute top-0 left-0.5 w-3 h-2.5 bg-primary rounded-sm" />
                   </div>
                 </div>
               </div>
@@ -116,7 +116,7 @@ export const VisionMissionSection = () => {
               <div 
                 className="absolute inset-0 rounded-full"
                 style={{
-                  background: "radial-gradient(circle, rgba(253, 80, 9, 0.15) 0%, transparent 70%)",
+                  background: "radial-gradient(circle, rgba(253, 80, 9, 0.1) 0%, transparent 70%)",
                   animation: "pulse-glow 2s ease-in-out infinite"
                 }}
               />
