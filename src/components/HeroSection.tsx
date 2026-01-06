@@ -26,21 +26,9 @@ export const HeroSection = () => {
         <div className="absolute bottom-1/4 right-1/4 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ width: "clamp(10rem, 25vw, 20rem)", height: "clamp(10rem, 25vw, 20rem)", animationDelay: "1s" }} />
       </div>
 
-      <div className="container-custom relative z-10 hero-container" style={{ paddingTop: "0", paddingBottom: "clamp(3rem, 6vw, 4.5rem)" }}>
-        <div className="max-w-4xl mx-auto text-center relative" style={{ paddingLeft: "clamp(0.5rem, 2vw, 1rem)", paddingRight: "clamp(0.5rem, 2vw, 1rem)" }}>
-          {/* Red Gridlines Pattern */}
-          <div 
-            className="absolute inset-0 opacity-30 pointer-events-none"
-            style={{
-              backgroundImage: `
-                linear-gradient(to right, rgba(255, 0, 0, 0.4) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255, 0, 0, 0.4) 1px, transparent 1px)
-              `,
-              backgroundSize: 'clamp(2rem, 4vw, 2.5rem) clamp(2rem, 4vw, 2.5rem)',
-            }}
-          />
-          
-          <div className="relative z-10 hero-content" style={{ display: "flex", flexDirection: "column", gap: "clamp(0.75rem, 2vw, 1.5rem)", alignItems: "center", marginTop: "clamp(-13rem, -26vw, -12.5rem)" }}>
+      <div className="container-custom relative z-10 hero-container flex flex-col items-center justify-center px-4 md:px-0" style={{ paddingTop: "0", paddingBottom: "clamp(3rem, 6vw, 4.5rem)" }}>
+        <div className="max-w-4xl mx-auto text-center relative w-full flex flex-col items-center px-2 md:px-4" style={{ paddingLeft: "clamp(0.5rem, 2vw, 1rem)", paddingRight: "clamp(0.5rem, 2vw, 1rem)" }}>
+          <div className="relative z-10 hero-content flex flex-col items-center justify-center text-center w-full mx-auto md:mx-auto" style={{ gap: "clamp(0.75rem, 2vw, 1.5rem)", marginTop: "clamp(-13rem, -26vw, -12.5rem)" }}>
             {/* Badge */}
             <div 
               className="inline-flex items-center gap-2 rounded-full animate-fade-up relative overflow-hidden"
@@ -90,17 +78,20 @@ export const HeroSection = () => {
 
             {/* Main Headline */}
             <h1 
-              className="animate-fade-up text-center" 
+              className="animate-fade-up text-center mx-auto" 
               style={{ 
                 animationDelay: "0.1s",
                 color: "#FAFAFA",
                 fontFamily: '"Spline Sans", sans-serif',
                 fontSize: "clamp(1.75rem, 4vw + 0.5rem, 3.5rem)",
                 fontStyle: "normal",
-                fontWeight: 300,
+                fontWeight: 100,
                 lineHeight: "1.1",
+                letterSpacing: "-0.02em",
                 paddingLeft: "clamp(0.5rem, 2vw, 1rem)",
-                paddingRight: "clamp(0.5rem, 2vw, 1rem)"
+                paddingRight: "clamp(0.5rem, 2vw, 1rem)",
+                width: "100%",
+                maxWidth: "100%"
               }}
             >
               Building Practical, Scalable
@@ -114,7 +105,8 @@ export const HeroSection = () => {
                   fontSize: "clamp(1.75rem, 4vw + 0.5rem, 3.5rem)",
                   fontStyle: "italic",
                   fontWeight: 400,
-                  lineHeight: "1.1"
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em"
                 }}
               >
                 AI Systems
@@ -122,8 +114,9 @@ export const HeroSection = () => {
             </h1>
 
             {/* Subheadline */}
-            <div className="rounded-xl max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s", padding: "clamp(1rem, 2.5vw, 1.5rem)", marginTop: "clamp(-1.5rem, -3vw, -1rem)" }}>
+            <div className="rounded-xl max-w-3xl mx-auto animate-fade-up w-full" style={{ animationDelay: "0.2s", padding: "clamp(1rem, 2.5vw, 1.5rem)", marginTop: "clamp(-1.5rem, -3vw, -1rem)" }}>
               <p 
+                className="text-center mx-auto"
                 style={{
                   color: "#FAFAFA",
                   fontFamily: '"Public Sans", sans-serif',
@@ -133,7 +126,9 @@ export const HeroSection = () => {
                   lineHeight: "1.6",
                   textAlign: "center",
                   paddingLeft: "clamp(0.5rem, 2vw, 1rem)",
-                  paddingRight: "clamp(0.5rem, 2vw, 1rem)"
+                  paddingRight: "clamp(0.5rem, 2vw, 1rem)",
+                  width: "100%",
+                  maxWidth: "100%"
                 }}
               >
                 We design, deploy AI systems that think responsibly, speak naturally, and work reliably combining cultural intelligence, advanced engineering, and real-world deployment experience across multiple industries.

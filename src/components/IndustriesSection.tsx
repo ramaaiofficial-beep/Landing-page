@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { MessageSquare } from "lucide-react";
+import { MessageSquare, GraduationCap, Heart, Users } from "lucide-react";
 import educationImg from "@/assets/education.jpg";
 import wellnessImg from "@/assets/wellness.jpg";
 import eldercareImg from "@/assets/eldercare.jpg";
@@ -13,6 +12,7 @@ const industries = [
     title: "Education",
     description: "Transform education with AI that adapts to individual learning styles, cultural contexts, and personal goals.",
     image: educationImg,
+    icon: GraduationCap,
     features: [
       "Personalized learning paths",
       "Cultural & linguistic adaptation",
@@ -25,6 +25,7 @@ const industries = [
     title: "Wellness",
     description: "Holistic wellness support that combines modern psychology with ancient wisdom for complete wellbeing.",
     image: wellnessImg,
+    icon: Heart,
     features: [
       "24/7 emotional support",
       "Mindfulness & meditation guidance",
@@ -37,6 +38,7 @@ const industries = [
     title: "Elder Care",
     description: "Compassionate AI companions that provide engagement, memory support, and connection for seniors.",
     image: eldercareImg,
+    icon: Users,
     features: [
       "Cognitive stimulation activities",
       "Medication & appointment reminders",
@@ -92,43 +94,85 @@ export const IndustriesSection = () => {
           {industries.map((industry, index) => (
             <div
               key={industry.title}
-              className="glass-card overflow-hidden"
+              className={`relative flex flex-col lg:flex-row ${industry.reverse ? "lg:flex-row-reverse" : ""}`}
+              style={{
+                gap: "10px",
+                padding: "24px",
+                width: "100%",
+                maxWidth: "1292px",
+                minHeight: "400px",
+                borderRadius: "24px",
+                backgroundColor: "#111111",
+                boxShadow: `
+                  -1px 0px 0px 0px rgba(255, 255, 255, 0.12) inset,
+                  0px -1px 0px 0px rgba(255, 255, 255, 0.12) inset,
+                  -2px -2px 2px -3px rgba(255, 255, 255, 1) inset,
+                  0px 1px 0px 0px rgba(255, 255, 255, 0.24) inset,
+                  1px 0px 0px 0px rgba(255, 255, 255, 0.16) inset,
+                  4px 4px 1px -5px rgba(255, 255, 255, 1) inset,
+                  0px 0px 0px 2px rgba(0, 0, 0, 0.01) inset
+                `,
+                backdropFilter: "blur(16px)",
+                backgroundColor: "#111111",
+                position: "relative",
+                overflow: "hidden",
+                margin: "0 auto",
+              }}
             >
-              <div className={`grid lg:grid-cols-2 ${industry.reverse ? "lg:flex-row-reverse" : ""}`} style={{ gap: 0 }}>
-                {/* Content */}
-                <div 
-                  className={`flex flex-col justify-center relative ${industry.reverse ? "lg:order-2" : ""}`}
+                {/* Hero background image at 25% opacity */}
+                <div
+                  className="absolute inset-0"
                   style={{
-                    padding: "clamp(1.5rem, 5vw, 3rem)",
                     backgroundImage: `url(${heroBg})`,
                     backgroundSize: "cover",
-                    backgroundPosition: "center",
+                    backgroundPosition: "left center",
                     backgroundRepeat: "no-repeat",
+                    opacity: 0.25,
+                    borderRadius: "24px",
+                    zIndex: 0,
+                  }}
+                />
+                {/* Content */}
+                <div
+                  className="flex flex-col justify-center relative"
+                  style={{
+                    padding: "clamp(1.5rem, 5vw, 3rem)",
+                    flex: "1 1 0%",
+                    zIndex: 1,
                   }}
                 >
-                  {/* Black overlay with less opacity */}
-                  <div className="absolute inset-0 bg-black/30" />
-                  
                   <div className="relative z-10">
-                    <div className="inline-flex items-center justify-center bg-primary/10 rounded-xl" style={{ width: "clamp(2.5rem, 5vw, 3rem)", height: "clamp(2.5rem, 5vw, 3rem)", marginBottom: "clamp(1rem, 2.5vw, 1.5rem)", borderRadius: "clamp(0.5rem, 1vw, 0.75rem)" }}>
-                      <MessageSquare className="text-primary" style={{ width: "clamp(1.25rem, 2.5vw, 1.5rem)", height: "clamp(1.25rem, 2.5vw, 1.5rem)" }} />
+                    {/* Icon - Small reddish-orange square with white icon outline */}
+                    <div 
+                      className="inline-flex items-center justify-center" 
+                      style={{ 
+                        width: "clamp(2.5rem, 5vw, 3rem)", 
+                        height: "clamp(2.5rem, 5vw, 3rem)", 
+                        marginBottom: "clamp(0.25rem, 0.8vw, 0.5rem)",
+                        backgroundColor: "#FD5009",
+                        borderRadius: "clamp(0.25rem, 0.5vw, 0.5rem)"
+                      }}
+                    >
+                      <industry.icon className="text-white" style={{ width: "clamp(1.25rem, 2.5vw, 1.5rem)", height: "clamp(1.25rem, 2.5vw, 1.5rem)", strokeWidth: 2 }} />
                     </div>
+                    {/* Title - Large white bold text */}
                     <h3 
                       style={{
                         alignSelf: "stretch",
                         color: "#FAFAFA",
                         fontFamily: '"Public Sans", sans-serif',
-                        fontSize: "clamp(1.25rem, 2.5vw, 1.625rem)",
+                        fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
                         fontStyle: "normal",
-                        fontWeight: 400,
-                        lineHeight: "1.3",
-                        marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)",
-                        textShadow: "0 2px 8px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.8)",
-                        letterSpacing: "0.01em"
+                        fontWeight: 700,
+                        lineHeight: "1.2",
+                        marginBottom: "clamp(0.25rem, 0.8vw, 0.5rem)",
+                        letterSpacing: "-0.01em",
+                        textShadow: "0 2px 8px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.8)"
                       }}
                     >
                       {industry.title}
                     </h3>
+                    {/* Description - Lighter white text */}
                     <p 
                       style={{
                         alignSelf: "stretch",
@@ -140,85 +184,107 @@ export const IndustriesSection = () => {
                         fontWeight: 400,
                         lineHeight: "1.6",
                         marginTop: 0,
-                        marginBottom: "clamp(0.75rem, 2vw, 1rem)",
-                        textShadow: "0 1px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.6)",
-                        letterSpacing: "0.01em"
+                        marginBottom: "clamp(0.5rem, 1.5vw, 1rem)",
+                        letterSpacing: "0.01em",
+                        textShadow: "0 1px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.6)"
                       }}
                       className="md:text-justify"
                     >
                       {industry.description}
                     </p>
-                    <ul 
+                    {/* Features - Lighter text with bullet points */}
+                    <ul
                       style={{
                         display: "flex",
                         flexDirection: "column",
-                        gap: "clamp(0.375rem, 1vw, 0.75rem)",
-                        marginBottom: "clamp(1rem, 3vw, 1.75rem)",
+                        gap: "clamp(0.5rem, 1.2vw, 0.75rem)",
+                        marginBottom: "clamp(1.5rem, 3vw, 2rem)",
                         color: "#777777",
                         fontFamily: '"Public Sans", sans-serif',
-                        fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)",
+                        fontSize: "20px",
                         fontStyle: "normal",
                         fontWeight: 400,
-                        lineHeight: "1.6",
-                        textShadow: "0 1px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.6)",
-                        letterSpacing: "0.01em"
+                        lineHeight: "100%",
+                        letterSpacing: "0%",
+                        listStyle: "none",
+                        padding: 0,
+                        width: "347px",
+                        height: "96px",
+                        textShadow: "0 1px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.6)"
                       }}
                     >
                       {industry.features.map((feature) => (
-                        <li key={feature} className="flex items-center" style={{ gap: "clamp(0.375rem, 1vw, 0.75rem)" }}>
-                          <span className="bg-primary rounded-full" style={{ width: "clamp(0.375rem, 0.75vw, 0.5rem)", height: "clamp(0.375rem, 0.75vw, 0.5rem)", minWidth: "clamp(0.375rem, 0.75vw, 0.5rem)", minHeight: "clamp(0.375rem, 0.75vw, 0.5rem)" }} />
-                          {feature}
+                        <li key={feature} className="flex items-start" style={{ gap: "clamp(0.5rem, 1vw, 0.75rem)" }}>
+                          <span style={{ 
+                            color: "#777777",
+                            marginTop: "0.25em",
+                            fontSize: "0.75em"
+                          }}>•</span>
+                          <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
 
-                {/* Image */}
-                <div className={`relative ${industry.reverse ? "lg:order-1" : ""}`} style={{ minHeight: "clamp(18.75rem, 40vw, 25rem)", height: "100%", aspectRatio: "4 / 3" }}>
-                  {/* Background images replacing gradient overlays */}
-                  {index === 0 && (
-                    <div 
-                      className="absolute inset-0 w-full h-full"
-                      style={{
-                        backgroundImage: `url(${industryImg1})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        backgroundRepeat: "no-repeat"
-                      }}
-                    />
-                  )}
-                  {index === 1 && (
-                    <div 
-                      className="absolute inset-0 w-full h-full"
-                      style={{
-                        backgroundImage: `url(${industryImg2})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        backgroundRepeat: "no-repeat"
-                      }}
-                    />
-                  )}
-                  {index === 2 && (
-                    <div 
-                      className="absolute inset-0 w-full h-full"
-                      style={{
-                        backgroundImage: `url(${industryImg3})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        backgroundRepeat: "no-repeat"
-                      }}
-                    />
-                  )}
-                  {index !== 0 && index !== 1 && index !== 2 && (
-                    <img
-                      src={industry.image}
-                      alt={industry.title}
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
-                  )}
+                {/* Image card */}
+                <div
+                  className="relative flex items-center justify-center"
+                  style={{
+                    flex: "1 1 0%",
+                    minHeight: "clamp(18.75rem, 40vw, 25rem)",
+                    zIndex: 1,
+                  }}
+                >
+                  <div
+                    className="w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl border border-white/5 bg-black/30 backdrop-blur-xl"
+                    style={{
+                      aspectRatio: "4 / 3",
+                    }}
+                  >
+                    {/* Background images replacing gradient overlays as a card */}
+                    {index === 0 && (
+                      <div
+                        className="w-full h-full"
+                        style={{
+                          backgroundImage: `url(${industryImg1})`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                          backgroundRepeat: "no-repeat",
+                        }}
+                      />
+                    )}
+                    {index === 1 && (
+                      <div
+                        className="w-full h-full"
+                        style={{
+                          backgroundImage: `url(${industryImg2})`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                          backgroundRepeat: "no-repeat",
+                        }}
+                      />
+                    )}
+                    {index === 2 && (
+                      <div
+                        className="w-full h-full"
+                        style={{
+                          backgroundImage: `url(${industryImg3})`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                          backgroundRepeat: "no-repeat",
+                        }}
+                      />
+                    )}
+                    {index !== 0 && index !== 1 && index !== 2 && (
+                      <img
+                        src={industry.image}
+                        alt={industry.title}
+                        className="w-full h-full object-cover"
+                      />
+                    )}
+                  </div>
                 </div>
-              </div>
             </div>
           ))}
         </div>

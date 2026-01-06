@@ -541,10 +541,47 @@
   @media (max-width: 767px) {
     .hero-container {
       padding-top: clamp(4rem, 10vw, 6rem) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+      width: 100% !important;
+      max-width: 100% !important;
     }
     
     .hero-content {
       margin-top: clamp(0rem, 2vw, 1rem) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    
+    .hero-content > * {
+      text-align: center !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    
+    .hero-content h1 {
+      text-align: center !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    
+    .hero-content p {
+      text-align: center !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
     }
   }
 
