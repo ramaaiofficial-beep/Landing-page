@@ -1,4 +1,4 @@
-# RAMA AI Landing Page
+# RAMA-AI-LANDING-PAGE
 
 A modern, responsive landing page built with React, TypeScript, and Tailwind CSS.
 

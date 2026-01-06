@@ -70,7 +70,7 @@ export const CareersSection = () => {
 
         <div className="grid lg:grid-cols-2" style={{ gap: "clamp(2rem, 5vw, 3.5rem)" }}>
           {/* Programs */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "clamp(0.75rem, 2vw, 1.25rem)" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "clamp(0.5rem, 1.5vw, 1rem)" }}>
             {programs.map((program) => (
               <div
                 key={program.title}
@@ -83,33 +83,31 @@ export const CareersSection = () => {
                   program.gradient
                     ? {
                         display: "flex",
-                        padding: "clamp(1.5rem, 4vw, 2.5rem)",
+                        padding: "clamp(1rem, 2.5vw, 1.5rem)",
                         flexDirection: "column",
                         justifyContent: "flex-start",
                         alignItems: "flex-start",
-                        gap: "clamp(0.5rem, 1.5vw, 1rem)",
+                        gap: "clamp(0.25rem, 0.8vw, 0.5rem)",
                         alignSelf: "stretch",
                         borderRadius: "clamp(1rem, 2vw, 1.25rem)",
-                        backgroundImage: `url(${heroBg}), linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(26, 10, 10, 0.9) 100%)`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        backgroundRepeat: "no-repeat",
+                        background: "linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(26, 10, 10, 0.9) 100%)",
+                        position: "relative",
+                        overflow: "hidden",
                         transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
                         transform: "translateY(0) scale(1)"
                       }
                     : {
                         display: "flex",
-                        padding: "clamp(1.5rem, 4vw, 2.5rem)",
+                        padding: "clamp(1rem, 2.5vw, 1.5rem)",
                         flexDirection: "column",
                         justifyContent: "flex-start",
                         alignItems: "flex-start",
-                        gap: "clamp(0.5rem, 1.5vw, 1rem)",
+                        gap: "clamp(0.25rem, 0.8vw, 0.5rem)",
                         alignSelf: "stretch",
                         borderRadius: "clamp(1rem, 2vw, 1.25rem)",
-                        backgroundImage: `url(${heroBg}), linear-gradient(180deg, rgba(26, 26, 26, 0.9) 0%, rgba(26, 15, 15, 0.9) 100%)`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        backgroundRepeat: "no-repeat",
+                        background: "linear-gradient(180deg, rgba(26, 26, 26, 0.9) 0%, rgba(26, 15, 15, 0.9) 100%)",
+                        position: "relative",
+                        overflow: "hidden",
                         border: "1px solid rgba(255, 255, 255, 0.1)",
                         transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
                         transform: "translateY(0) scale(1)"
@@ -132,6 +130,19 @@ export const CareersSection = () => {
                     : "rgba(255, 255, 255, 0.1)";
                 }}
               >
+                {/* Background image at 20% opacity */}
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    backgroundImage: `url(${heroBg})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    opacity: 0.2,
+                    borderRadius: "clamp(1rem, 2vw, 1.25rem)",
+                    zIndex: 0,
+                  }}
+                />
                 <div 
                   style={{
                     display: "flex",
@@ -145,7 +156,9 @@ export const CareersSection = () => {
                     background: "#FFF",
                     boxShadow: "0 0 0 1px rgba(41, 0, 41, 0.1)",
                     backdropFilter: "blur(10px)",
-                    marginBottom: "clamp(0.75rem, 2vw, 1rem)"
+                    marginBottom: "clamp(0.125rem, 0.5vw, 0.375rem)",
+                    position: "relative",
+                    zIndex: 1
                   }}
                 >
                   <program.icon className="text-primary" style={{ width: "clamp(1.25rem, 2.5vw, 1.5rem)", height: "clamp(1.25rem, 2.5vw, 1.5rem)" }} />
@@ -160,9 +173,11 @@ export const CareersSection = () => {
                     fontWeight: 400,
                     lineHeight: "1.3",
                     marginTop: 0,
-                    marginBottom: "0.05rem",
+                    marginBottom: "0",
                     textShadow: "0 2px 8px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.8)",
-                    letterSpacing: "0.01em"
+                    letterSpacing: "0.01em",
+                    position: "relative",
+                    zIndex: 1
                   }}
                 >
                   {program.title}
@@ -177,10 +192,12 @@ export const CareersSection = () => {
                     fontStyle: "normal",
                     fontWeight: 400,
                     lineHeight: "1.6",
-                    marginTop: 0,
+                    marginTop: "clamp(-0.5rem, -1vw, -0.25rem)",
                     marginBottom: "clamp(1.5rem, 4vw, 2.5rem)",
                     textShadow: "0 1px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.6)",
-                    letterSpacing: "0.01em"
+                    letterSpacing: "0.01em",
+                    position: "relative",
+                    zIndex: 1
                   }}
                   className="md:text-justify"
                 >
@@ -211,7 +228,9 @@ export const CareersSection = () => {
                     lineHeight: "normal",
                     alignSelf: "flex-start",
                     backdropFilter: "blur(10px)",
-                    transition: "all 0.3s ease"
+                    transition: "all 0.3s ease",
+                    position: "relative",
+                    zIndex: 1
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.background = "rgba(253, 80, 9, 0.3)";

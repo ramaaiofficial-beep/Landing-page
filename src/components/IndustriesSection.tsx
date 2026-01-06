@@ -113,7 +113,6 @@ export const IndustriesSection = () => {
                   0px 0px 0px 2px rgba(0, 0, 0, 0.01) inset
                 `,
                 backdropFilter: "blur(16px)",
-                backgroundColor: "#111111",
                 position: "relative",
                 overflow: "hidden",
                 margin: "0 auto",
