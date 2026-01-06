@@ -39,9 +39,10 @@ export const CapabilitiesSection = () => {
               fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)",
               fontStyle: "normal",
               fontWeight: 500,
-              lineHeight: "1.2"
+              lineHeight: "1.2",
+              marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
             }}
-            className="mb-4 px-2"
+            className="px-2"
           >
             Pioneering the{" "}
             <span 
@@ -69,7 +70,8 @@ export const CapabilitiesSection = () => {
               fontSize: "clamp(0.875rem, 1.6vw, 1.125rem)",
               fontStyle: "normal",
               fontWeight: 400,
-              lineHeight: "1.6"
+              lineHeight: "1.6",
+              marginTop: 0
             }}
             className="px-2"
           >
@@ -146,7 +148,7 @@ export const CapabilitiesSection = () => {
               
               <div className="relative z-10">
                 {/* Icons */}
-                <div style={{ marginBottom: "clamp(1.5rem, 4vw, 2.5rem)" }}>
+                <div style={{ marginBottom: "clamp(0.75rem, 2vw, 1rem)" }}>
                   <capability.icon className="text-primary" style={{ width: "clamp(2.5rem, 5vw, 3rem)", height: "clamp(2.5rem, 5vw, 3rem)" }} />
                 </div>
 
@@ -159,7 +161,7 @@ export const CapabilitiesSection = () => {
                       fontStyle: "normal",
                       fontWeight: 600,
                       lineHeight: "1.3",
-                      marginBottom: "clamp(0.5rem, 1.5vw, 1rem)"
+                      marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
                     }}
                   >
                     {capability.title}
@@ -172,7 +174,8 @@ export const CapabilitiesSection = () => {
                       fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)",
                       fontStyle: "normal",
                       fontWeight: 400,
-                      lineHeight: "1.6"
+                      lineHeight: "1.6",
+                      marginTop: 0
                     }}
                     className="md:text-justify"
                   >

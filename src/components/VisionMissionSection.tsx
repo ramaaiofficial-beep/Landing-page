@@ -7,7 +7,7 @@ export const VisionMissionSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto" style={{ marginBottom: "clamp(1.5rem, 4vw, 2.5rem)" }}>
           <h2 
-            className="mb-4 px-2"
+            className="px-2"
             style={{
               alignSelf: "stretch",
               textAlign: "center",
@@ -16,7 +16,8 @@ export const VisionMissionSection = () => {
               fontStyle: "normal",
               fontWeight: 500,
               lineHeight: "1.2",
-              color: "#FAFAFA"
+              color: "#FAFAFA",
+              marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
             }}
           >
             Building AI with Heart & Soul
@@ -31,7 +32,8 @@ export const VisionMissionSection = () => {
               fontStyle: "normal",
               fontWeight: 400,
               lineHeight: "1.6",
-              letterSpacing: "0%"
+              letterSpacing: "0%",
+              marginTop: 0
             }}
             className="px-2"
           >
@@ -63,23 +65,24 @@ export const VisionMissionSection = () => {
                 fontStyle: "normal",
                 fontWeight: 200,
                 lineHeight: "1.3",
-                marginBottom: "clamp(1rem, 2.5vw, 1.5rem)"
+                marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
               }}
             >
               Our Vision
             </h3>
-            <p 
-              style={{
-                alignSelf: "stretch",
-                color: "#777777",
-                textAlign: "center",
-                fontFamily: '"Public Sans", sans-serif',
-                fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)",
-                fontStyle: "normal",
-                fontWeight: 400,
-                lineHeight: "1.6"
-              }}
-            >
+          <p 
+            style={{
+              alignSelf: "stretch",
+              color: "#777777",
+              textAlign: "center",
+              fontFamily: '"Public Sans", sans-serif',
+              fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)",
+              fontStyle: "normal",
+              fontWeight: 400,
+              lineHeight: "1.6",
+              marginTop: 0
+            }}
+          >
               To redefine artificial intelligence as a trusted companion that enhances
               decision-making, productivity, and well-being while staying deeply
               aligned with human values and social responsibility.
@@ -127,25 +130,26 @@ export const VisionMissionSection = () => {
                 fontStyle: "normal",
                 fontWeight: 200,
                 lineHeight: "1.3",
-                marginBottom: "clamp(1rem, 2.5vw, 1.5rem)",
+                marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)",
                 marginLeft: "auto",
                 marginRight: "auto"
               }}
             >
               Our Mission
             </h3>
-            <p 
-              style={{
-                alignSelf: "stretch",
-                color: "#777777",
-                textAlign: "center",
-                fontFamily: '"Public Sans", sans-serif',
-                fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)",
-                fontStyle: "normal",
-                fontWeight: 400,
-                lineHeight: "1.6"
-              }}
-            >
+          <p 
+            style={{
+              alignSelf: "stretch",
+              color: "#777777",
+              textAlign: "center",
+              fontFamily: '"Public Sans", sans-serif',
+              fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)",
+              fontStyle: "normal",
+              fontWeight: 400,
+              lineHeight: "1.6",
+              marginTop: 0
+            }}
+          >
               To continuously innovate human-centric AI systems through research,
               real-world deployment, and collaboration—ensuring technology remains
               trustworthy, inclusive, and beneficial to society.

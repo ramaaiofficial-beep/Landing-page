@@ -32,9 +32,10 @@ export const WhyUsSection = () => {
               fontSize: "clamp(1.75rem, 4vw, 2.625rem)",
               fontStyle: "normal",
               fontWeight: 500,
-              lineHeight: "1.2"
+              lineHeight: "1.2",
+              marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
             }}
-            className="mb-4 px-2"
+            className="px-2"
           >
             Why <span 
               style={{
@@ -61,7 +62,8 @@ export const WhyUsSection = () => {
               fontSize: "clamp(0.875rem, 1.6vw, 1.125rem)",
               fontStyle: "normal",
               fontWeight: 400,
-              lineHeight: "1.6"
+              lineHeight: "1.6",
+              marginTop: 0
             }}
             className="px-2"
           >

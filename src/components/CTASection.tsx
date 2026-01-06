@@ -25,7 +25,7 @@ export const CTASection = () => {
               fontStyle: "normal",
               fontWeight: 600,
               lineHeight: "1.2",
-              marginBottom: "clamp(1.5rem, 4vw, 2.5rem)",
+              marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)",
               paddingLeft: "clamp(0.5rem, 2vw, 1rem)",
               paddingRight: "clamp(0.5rem, 2vw, 1rem)"
             }}
@@ -44,6 +44,7 @@ export const CTASection = () => {
               fontStyle: "normal",
               fontWeight: 400,
               lineHeight: "1.6",
+              marginTop: 0,
               marginBottom: "clamp(1.5rem, 4vw, 2.5rem)",
               maxWidth: "clamp(20rem, 80vw, 42rem)",
               marginLeft: "auto",

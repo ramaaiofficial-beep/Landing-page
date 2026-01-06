@@ -62,9 +62,10 @@ export const IndustriesSection = () => {
               fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)",
               fontStyle: "normal",
               fontWeight: 500,
-              lineHeight: "1.2"
+              lineHeight: "1.2",
+              marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
             }}
-            className="mb-4 px-2"
+            className="px-2"
           >
             Transforming Lives Across Industries
           </h2>
@@ -77,7 +78,8 @@ export const IndustriesSection = () => {
               fontSize: "clamp(0.875rem, 1.6vw, 1.125rem)",
               fontStyle: "normal",
               fontWeight: 400,
-              lineHeight: "1.6"
+              lineHeight: "1.6",
+              marginTop: 0
             }}
             className="px-2"
           >
@@ -120,7 +122,7 @@ export const IndustriesSection = () => {
                         fontStyle: "normal",
                         fontWeight: 400,
                         lineHeight: "1.3",
-                        marginBottom: "clamp(1rem, 2.5vw, 1.5rem)",
+                        marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)",
                         textShadow: "0 2px 8px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.8)",
                         letterSpacing: "0.01em"
                       }}
@@ -137,7 +139,8 @@ export const IndustriesSection = () => {
                         fontStyle: "normal",
                         fontWeight: 400,
                         lineHeight: "1.6",
-                        marginBottom: "clamp(1.5rem, 4vw, 2.5rem)",
+                        marginTop: 0,
+                        marginBottom: "clamp(0.75rem, 2vw, 1rem)",
                         textShadow: "0 1px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.6)",
                         letterSpacing: "0.01em"
                       }}
@@ -149,8 +152,8 @@ export const IndustriesSection = () => {
                       style={{
                         display: "flex",
                         flexDirection: "column",
-                        gap: "clamp(0.5rem, 1.5vw, 1rem)",
-                        marginBottom: "clamp(1.5rem, 4vw, 2.5rem)",
+                        gap: "clamp(0.375rem, 1vw, 0.75rem)",
+                        marginBottom: "clamp(1rem, 3vw, 1.75rem)",
                         color: "#777777",
                         fontFamily: '"Public Sans", sans-serif',
                         fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)",
@@ -162,7 +165,7 @@ export const IndustriesSection = () => {
                       }}
                     >
                       {industry.features.map((feature) => (
-                        <li key={feature} className="flex items-center" style={{ gap: "clamp(0.5rem, 1.5vw, 1rem)" }}>
+                        <li key={feature} className="flex items-center" style={{ gap: "clamp(0.375rem, 1vw, 0.75rem)" }}>
                           <span className="bg-primary rounded-full" style={{ width: "clamp(0.375rem, 0.75vw, 0.5rem)", height: "clamp(0.375rem, 0.75vw, 0.5rem)", minWidth: "clamp(0.375rem, 0.75vw, 0.5rem)", minHeight: "clamp(0.375rem, 0.75vw, 0.5rem)" }} />
                           {feature}
                         </li>

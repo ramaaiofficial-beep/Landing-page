@@ -88,7 +88,7 @@ export const ContactSection = () => {
           {/* Contact Info */}
           <div>
             <h2 
-              className="mb-4"
+              className=""
               style={{
                 alignSelf: "stretch",
                 color: "#FAFAFA",
@@ -96,7 +96,8 @@ export const ContactSection = () => {
                 fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)",
                 fontStyle: "normal",
                 fontWeight: 500,
-                lineHeight: "1.2"
+                lineHeight: "1.2",
+                marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
               }}
             >
               Let's Connect
@@ -112,6 +113,7 @@ export const ContactSection = () => {
                 fontStyle: "normal",
                 fontWeight: 400,
                 lineHeight: "1.6",
+                marginTop: 0,
                 marginBottom: "clamp(1.5rem, 4vw, 2.5rem)"
               }}
             >
@@ -126,7 +128,6 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h3 
-                      className="mb-1"
                       style={{
                         alignSelf: "stretch",
                         color: "#777777",
@@ -134,7 +135,8 @@ export const ContactSection = () => {
                         fontSize: "clamp(1rem, 1.5vw, 1.125rem)",
                         fontStyle: "normal",
                         fontWeight: 600,
-                        lineHeight: "1.4"
+                        lineHeight: "1.4",
+                        marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
                       }}
                     >
                       {info.title}
@@ -148,7 +150,8 @@ export const ContactSection = () => {
                         fontSize: "clamp(0.875rem, 1.3vw, 1rem)",
                         fontStyle: "normal",
                         fontWeight: 400,
-                        lineHeight: "1.5"
+                        lineHeight: "1.5",
+                        marginTop: 0
                       }}
                     >
                       {info.description}
@@ -168,7 +171,6 @@ export const ContactSection = () => {
           {/* Contact Form */}
           <div className="glass-card" style={{ padding: "clamp(1.5rem, 4vw, 2.5rem)" }}>
             <h3 
-              className="mb-2"
               style={{
                 alignSelf: "stretch",
                 color: "#EEEEEE",
@@ -176,7 +178,8 @@ export const ContactSection = () => {
                 fontSize: "clamp(1.25rem, 2.5vw, 1.625rem)",
                 fontStyle: "normal",
                 fontWeight: 400,
-                lineHeight: "1.3"
+                lineHeight: "1.3",
+                marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
               }}
             >
               Get in touch

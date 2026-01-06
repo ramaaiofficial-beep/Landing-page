@@ -43,7 +43,7 @@ export const CareersSection = () => {
               fontStyle: "normal",
               fontWeight: 500,
               lineHeight: "1.2",
-              marginBottom: "clamp(1rem, 2.5vw, 1.5rem)",
+              marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)",
               paddingLeft: "clamp(0.5rem, 2vw, 1rem)",
               paddingRight: "clamp(0.5rem, 2vw, 1rem)"
             }}
@@ -59,7 +59,8 @@ export const CareersSection = () => {
               fontSize: "clamp(0.875rem, 1.6vw, 1.125rem)",
               fontStyle: "normal",
               fontWeight: 400,
-              lineHeight: "1.6"
+              lineHeight: "1.6",
+              marginTop: 0
             }}
             className="px-2"
           >
@@ -158,7 +159,7 @@ export const CareersSection = () => {
                     fontStyle: "normal",
                     fontWeight: 400,
                     lineHeight: "1.3",
-                    marginBottom: "clamp(0.75rem, 2vw, 1rem)",
+                    marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)",
                     textShadow: "0 2px 8px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.8)",
                     letterSpacing: "0.01em"
                   }}
@@ -175,6 +176,7 @@ export const CareersSection = () => {
                     fontStyle: "normal",
                     fontWeight: 400,
                     lineHeight: "1.6",
+                    marginTop: 0,
                     marginBottom: "clamp(1.5rem, 4vw, 2.5rem)",
                     textShadow: "0 1px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.6)",
                     letterSpacing: "0.01em"
@@ -237,7 +239,7 @@ export const CareersSection = () => {
                 fontStyle: "normal",
                 fontWeight: 400,
                 lineHeight: "1.3",
-                marginBottom: "clamp(1.5rem, 4vw, 2.5rem)"
+                marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
               }}
             >
               Application Process
@@ -277,7 +279,7 @@ export const CareersSection = () => {
                           fontStyle: "normal",
                           fontWeight: 600,
                           lineHeight: "1.4",
-                          marginBottom: "clamp(0.5rem, 1.5vw, 1rem)"
+                          marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
                         }}
                       >
                         {step.title}
@@ -291,6 +293,7 @@ export const CareersSection = () => {
                           fontStyle: "normal",
                           fontWeight: 400,
                           lineHeight: "1.6",
+                          marginTop: 0,
                           marginBottom: "clamp(1.5rem, 4vw, 2.5rem)"
                         }}
                         className="md:text-justify"
