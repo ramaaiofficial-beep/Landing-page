@@ -317,9 +317,9 @@
 
   .section-padding {
     /* Fluid padding that scales with viewport - responsive to all screen sizes */
-    /* Slightly tighter spacing so gaps between stacked sections stay small and equal */
-    padding-top: clamp(1.5rem, 6vh, 4rem);
-    padding-bottom: clamp(1.5rem, 6vh, 4rem);
+    /* Tighter, standardized spacing so gaps between all sections stay small and equal */
+    padding-top: clamp(1.25rem, 5vh, 3.25rem);
+    padding-bottom: clamp(1.25rem, 5vh, 3.25rem);
   }
 
   /* Fluid spacing utilities */

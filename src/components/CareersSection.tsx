@@ -70,7 +70,7 @@ export const CareersSection = () => {
 
         <div className="grid lg:grid-cols-2" style={{ gap: "clamp(2rem, 5vw, 3.5rem)" }}>
           {/* Programs */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "clamp(1.5rem, 4vw, 2.5rem)" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "clamp(0.75rem, 2vw, 1.25rem)" }}>
             {programs.map((program) => (
               <div
                 key={program.title}
@@ -145,7 +145,7 @@ export const CareersSection = () => {
                     background: "#FFF",
                     boxShadow: "0 0 0 1px rgba(41, 0, 41, 0.1)",
                     backdropFilter: "blur(10px)",
-                    marginBottom: "clamp(1rem, 2.5vw, 1.5rem)"
+                    marginBottom: "clamp(0.75rem, 2vw, 1rem)"
                   }}
                 >
                   <program.icon className="text-primary" style={{ width: "clamp(1.25rem, 2.5vw, 1.5rem)", height: "clamp(1.25rem, 2.5vw, 1.5rem)" }} />
@@ -159,7 +159,8 @@ export const CareersSection = () => {
                     fontStyle: "normal",
                     fontWeight: 400,
                     lineHeight: "1.3",
-                    marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)",
+                    marginTop: 0,
+                    marginBottom: "0.05rem",
                     textShadow: "0 2px 8px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.8)",
                     letterSpacing: "0.01em"
                   }}
@@ -230,7 +231,15 @@ export const CareersSection = () => {
           </div>
 
           {/* Application Process */}
-          <div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              height: "100%",
+              gap: "clamp(0.75rem, 2vw, 1.25rem)",
+            }}
+          >
             <h3 
               style={{
                 color: "#FFF",
@@ -249,7 +258,8 @@ export const CareersSection = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
-                gap: "clamp(2.5rem, 6vw, 3.5rem)",
+                /* Tighter vertical spacing between the 4 steps */
+                gap: "clamp(1.25rem, 3vw, 2rem)",
                 alignSelf: "stretch"
               }}
             >
@@ -294,7 +304,8 @@ export const CareersSection = () => {
                           fontWeight: 400,
                           lineHeight: "1.6",
                           marginTop: 0,
-                          marginBottom: "clamp(1.5rem, 4vw, 2.5rem)"
+                          /* Less space below each description */
+                          marginBottom: "clamp(0.5rem, 1.5vw, 1rem)"
                         }}
                         className="md:text-justify"
                       >
@@ -305,8 +316,9 @@ export const CareersSection = () => {
                   {index < steps.length - 1 && (
                     <div 
                       style={{
-                        marginTop: "clamp(1.5rem, 4vw, 2.5rem)",
-                        marginBottom: "clamp(1.5rem, 4vw, 2.5rem)",
+                        /* Tighter space around dividers between steps */
+                        marginTop: "clamp(0.5rem, 1.5vw, 1rem)",
+                        marginBottom: "clamp(0.5rem, 1.5vw, 1rem)",
                         height: "1px",
                         background: "rgba(255, 255, 255, 0.1)",
                         width: "100%"

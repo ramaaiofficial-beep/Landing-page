@@ -88,7 +88,7 @@ export const IndustriesSection = () => {
         </div>
 
         {/* Industry Cards */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "clamp(2rem, 5vw, 3rem)" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "clamp(1rem, 3vw, 2rem)" }}>
           {industries.map((industry, index) => (
             <div
               key={industry.title}

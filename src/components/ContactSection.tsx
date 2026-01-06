@@ -120,7 +120,7 @@ export const ContactSection = () => {
               Ready to transform the future of human-AI interaction? We'd love to hear from you.
             </p>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "clamp(2rem, 5vw, 3rem)" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "clamp(0.75rem, 2vw, 1.25rem)" }}>
               {contactInfo.map((info) => (
                 <div key={info.title} className="flex" style={{ gap: "clamp(1rem, 2.5vw, 1.5rem)" }}>
                   <div className="flex-shrink-0 bg-primary/10 rounded-xl flex items-center justify-center" style={{ width: "clamp(2.5rem, 5vw, 3rem)", height: "clamp(2.5rem, 5vw, 3rem)", borderRadius: "clamp(0.5rem, 1vw, 0.75rem)" }}>

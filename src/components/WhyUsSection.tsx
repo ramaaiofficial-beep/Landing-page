@@ -22,7 +22,7 @@ export const WhyUsSection = () => {
     <section className="section-padding bg-background noise-overlay">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto" style={{ marginBottom: "clamp(1.5rem, 4vw, 2.5rem)" }}>
+        <div className="text-center max-w-2xl mx-auto" style={{ marginBottom: "clamp(0.4rem, 1.2vw, 0.75rem)" }}>
           <h2 
             style={{
               alignSelf: "stretch",
