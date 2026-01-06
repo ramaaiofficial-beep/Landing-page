@@ -65,7 +65,7 @@ export const VisionMissionSection = () => {
                 fontStyle: "normal",
                 fontWeight: 200,
                 lineHeight: "1.3",
-                marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
+                marginBottom: "clamp(0.35rem, 1vw, 0.6rem)"
               }}
             >
               Our Vision
@@ -130,7 +130,7 @@ export const VisionMissionSection = () => {
                 fontStyle: "normal",
                 fontWeight: 200,
                 lineHeight: "1.3",
-                marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)",
+                marginBottom: "clamp(0.35rem, 1vw, 0.6rem)",
                 marginLeft: "auto",
                 marginRight: "auto"
               }}
