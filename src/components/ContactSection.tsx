@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Briefcase, Search, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { typography, fontSizes } from "@/lib/styles";
 
 const contactInfo = [
   {
@@ -88,15 +89,10 @@ export const ContactSection = () => {
           {/* Contact Info */}
           <div>
             <h2 
-              className=""
               style={{
-                alignSelf: "stretch",
-                color: "#FAFAFA",
-                fontFamily: '"Spline Sans", sans-serif',
-                fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)",
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "1.2",
+                ...typography.sectionHeadingSpline,
+                fontSize: fontSizes.sectionHeading,
+                textAlign: "left",
                 marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
               }}
             >
@@ -105,15 +101,9 @@ export const ContactSection = () => {
             <p 
               className="md:text-justify text-left"
               style={{
-                alignSelf: "stretch",
-                color: "#777777",
+                ...typography.sectionParagraph,
+                fontSize: fontSizes.bodyText,
                 textAlign: "left",
-                fontFamily: '"Public Sans", sans-serif',
-                fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)",
-                fontStyle: "normal",
-                fontWeight: 400,
-                lineHeight: "1.6",
-                marginTop: 0,
                 marginBottom: "clamp(1.5rem, 4vw, 2.5rem)"
               }}
             >

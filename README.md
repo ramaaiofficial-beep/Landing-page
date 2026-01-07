@@ -1,38 +1,35 @@
 # RAMA-AI-LANDING-PAGE
 
-A modern, responsive landing page built with React, TypeScript, and Tailwind CSS.
+A modern, responsive landing page for RAMA AI built with React, TypeScript, and Tailwind CSS.
 
 ## Technologies
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-- React Router
+- **Vite** - Fast build tool and dev server
+- **TypeScript** - Type-safe JavaScript
+- **React** - UI library
+- **shadcn-ui** - Component library
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Router** - Client-side routing
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (v18 or higher) & npm installed
 
 ### Installation
 
 ```sh
-# Step 1: Navigate to the project directory
-cd <YOUR_PROJECT_NAME>
-
-# Step 2: Install the necessary dependencies
+# Install dependencies
 npm install
 
-# Step 3: Start the development server
+# Start development server
 npm run dev
 ```
 
-The application will be available at `http://localhost:8080` (or another port if 8080 is in use).
+The application will be available at `http://localhost:8080`.
 
 ## Building for Production
 
@@ -40,7 +37,7 @@ The application will be available at `http://localhost:8080` (or another port if
 npm run build
 ```
 
-The built files will be in the `dist` directory.
+The built files will be in the `dist` directory, ready for deployment.
 
 ## Deployment to Vercel
 
@@ -66,38 +63,41 @@ This project is configured for easy deployment to Vercel:
 
 ## Responsive Design
 
-The website is fully responsive and optimized for:
+The website is fully responsive and optimized for all screen sizes:
 - **Mobile devices** (320px - 767px)
 - **Tablets** (768px - 1023px)
 - **Laptops** (1024px - 1439px)
 - **Desktop** (1440px+)
 
-All components use responsive breakpoints:
-- `sm:` - 640px and up
-- `md:` - 768px and up
-- `lg:` - 1024px and up
-- `xl:` - 1280px and up
-- `2xl:` - 1536px and up
+All components use fluid typography with `clamp()` for seamless scaling across all devices.
 
 ## Project Structure
 
-- `src/components/` - React components
-- `src/pages/` - Page components
-- `src/assets/` - Static assets (images, etc.)
-- `src/lib/` - Utility functions
-- `public/` - Public assets
-- `vercel.json` - Vercel deployment configuration
+```
+src/
+├── components/     # React components (Hero, Navbar, Sections, etc.)
+├── pages/         # Page components
+├── assets/        # Static assets (images, etc.)
+├── lib/           # Utility functions and shared styles
+├── hooks/         # Custom React hooks
+└── index.css      # Global styles
+
+public/            # Public assets
+vercel.json        # Vercel deployment configuration
+```
 
 ## Features
 
 - ✅ Fully responsive design (mobile, tablet, desktop)
-- ✅ Production-ready code
+- ✅ Production-ready code with optimized builds
 - ✅ SEO optimized
 - ✅ Fast loading with Vite
 - ✅ TypeScript for type safety
 - ✅ Modern UI with Tailwind CSS
 - ✅ Form handling with web3forms integration
+- ✅ Consistent design system with shared styles
+- ✅ No duplicate CSS or containers
 
 ## License
 
-All rights reserved.
+All rights reserved. © 2025 RAMA AI

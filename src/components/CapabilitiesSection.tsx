@@ -1,5 +1,6 @@
 import { Brain, RefreshCw, Server, Layers } from "lucide-react";
 import heroBg from "@/assets/hero section bg.png";
+import { typography, fontSizes, containers } from "@/lib/styles";
 
 const capabilities = [
   {
@@ -29,20 +30,12 @@ export const CapabilitiesSection = () => {
     <section id="capabilities" className="section-padding bg-background noise-overlay relative">
       <div className="container-custom relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto" style={{ marginBottom: "clamp(1.5rem, 4vw, 2.5rem)" }}>
+        <div className="text-center max-w-2xl mx-auto px-2" style={containers.sectionHeader}>
           <h2 
             style={{
-              alignSelf: "stretch",
-              color: "#FAFAFA",
-              textAlign: "center",
-              fontFamily: '"Spline Sans", sans-serif',
-              fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)",
-              fontStyle: "normal",
-              fontWeight: 500,
-              lineHeight: "1.2",
-              marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
+              ...typography.sectionHeadingSpline,
+              fontSize: fontSizes.sectionHeading,
             }}
-            className="px-2"
           >
             Pioneering the{" "}
             <span 
@@ -52,10 +45,10 @@ export const CapabilitiesSection = () => {
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 fontFamily: '"Spline Sans", sans-serif',
-                fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)",
+                fontSize: fontSizes.sectionHeading,
                 fontStyle: "normal",
                 fontWeight: 500,
-                lineHeight: "1.2"
+                lineHeight: "normal"
               }}
             >
               Future of AI
@@ -63,17 +56,9 @@ export const CapabilitiesSection = () => {
           </h2>
           <p 
             style={{
-              alignSelf: "stretch",
-              color: "#777777",
-              textAlign: "center",
-              fontFamily: '"Public Sans", sans-serif',
-              fontSize: "clamp(0.875rem, 1.6vw, 1.125rem)",
-              fontStyle: "normal",
-              fontWeight: 400,
-              lineHeight: "1.6",
-              marginTop: 0
+              ...typography.sectionParagraph,
+              fontSize: fontSizes.sectionParagraph,
             }}
-            className="px-2"
           >
             Our work focuses on building future-ready AI systems that scale
             responsibly and perform reliably in real operational environments.
@@ -94,7 +79,7 @@ export const CapabilitiesSection = () => {
                 className="group relative overflow-hidden rounded-2xl cursor-pointer"
                 style={{ 
                   animationDelay: `${index * 0.1}s`,
-                  padding: "clamp(1.5rem, 4vw, 2.5rem)",
+                  padding: "clamp(1.25rem, 3vw, 2rem)",
                   background: isGradientCard 
                     ? "linear-gradient(135deg, rgba(139, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.9) 100%)"
                     : index === 2
@@ -171,11 +156,11 @@ export const CapabilitiesSection = () => {
                       color: "#777777",
                       textAlign: "left",
                       fontFamily: '"Public Sans", sans-serif',
-                      fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)",
+                      fontSize: "clamp(0.875rem, 1.5vw, 1.25rem)",
                       fontStyle: "normal",
                       fontWeight: 400,
-                      lineHeight: "1.6",
-                      marginTop: "-0.25rem"
+                      lineHeight: "normal",
+                      marginTop: 0
                     }}
                     className="md:text-justify"
                   >

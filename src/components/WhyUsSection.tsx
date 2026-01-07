@@ -4,6 +4,7 @@ import image3 from "@/assets/Background+Overlay+Shadow+OverlayBlur (3).png";
 import mobileImage1 from "@/assets/mobile-1.png";
 import mobileImage2 from "@/assets/mobile-2.png";
 import mobileImage3 from "@/assets/mobile-3.png";
+import { typography, fontSizes, containers } from "@/lib/styles";
 
 const images = [
   image1,
@@ -22,20 +23,12 @@ export const WhyUsSection = () => {
     <section className="section-padding bg-background noise-overlay">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto" style={{ marginBottom: "clamp(0.4rem, 1.2vw, 0.75rem)" }}>
+        <div className="text-center max-w-2xl mx-auto px-2" style={containers.sectionHeaderSmall}>
           <h2 
             style={{
-              alignSelf: "stretch",
-              color: "#FAFAFA",
-              textAlign: "center",
-              fontFamily: '"Public Sans", sans-serif',
-              fontSize: "clamp(1.75rem, 4vw, 2.625rem)",
-              fontStyle: "normal",
-              fontWeight: 500,
-              lineHeight: "1.2",
-              marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
+              ...typography.sectionHeading,
+              fontSize: fontSizes.sectionHeadingLarge,
             }}
-            className="px-2"
           >
             Why <span 
               style={{
@@ -44,10 +37,10 @@ export const WhyUsSection = () => {
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 fontFamily: '"Public Sans", sans-serif',
-                fontSize: "clamp(1.75rem, 4vw, 2.625rem)",
+                fontSize: fontSizes.sectionHeadingLarge,
                 fontStyle: "normal",
                 fontWeight: 500,
-                lineHeight: "1.2"
+                lineHeight: "normal"
               }}
             >
               RAMA AI
@@ -55,17 +48,9 @@ export const WhyUsSection = () => {
           </h2>
           <p 
             style={{
-              alignSelf: "stretch",
-              color: "#777777",
-              textAlign: "center",
-              fontFamily: '"Public Sans", sans-serif',
-              fontSize: "clamp(0.875rem, 1.6vw, 1.125rem)",
-              fontStyle: "normal",
-              fontWeight: 400,
-              lineHeight: "1.6",
-              marginTop: 0
+              ...typography.sectionParagraph,
+              fontSize: fontSizes.sectionParagraph,
             }}
-            className="px-2"
           >
             Our approach combines culture, ethics, and engineering to deliver practical AI
             solutions that scale responsibly across industries and communities.

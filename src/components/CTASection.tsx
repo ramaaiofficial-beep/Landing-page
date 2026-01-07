@@ -1,79 +1,72 @@
-import { Button } from "@/components/ui/button";
+import { typography, fontSizes } from "@/lib/styles";
 
 export const CTASection = () => {
+  const buttonBaseStyle = {
+    height: "40px",
+    padding: "8px 24px",
+    borderRadius: "8px",
+    fontFamily: '"Public Sans", sans-serif',
+    fontSize: "12px",
+    fontWeight: 500,
+    lineHeight: "normal",
+    cursor: "pointer",
+    transition: "all 0.3s ease",
+    border: "none"
+  };
+
   return (
     <section className="section-padding cta-gradient noise-overlay relative overflow-hidden">
-      {/* Decorative elements */}
       <div 
         className="absolute inset-0"
         style={{
           background: "linear-gradient(135deg, rgba(253, 80, 9, 0.15) 0%, rgba(253, 80, 9, 0.05) 50%, transparent 100%)"
         }}
-      >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary/10 rounded-full blur-3xl" style={{ width: "clamp(20rem, 50vw, 37.5rem)", height: "clamp(20rem, 50vw, 37.5rem)" }} />
-      </div>
+      />
 
       <div className="container-custom relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h2 
             style={{
-              alignSelf: "stretch",
-              color: "#FAFAFA",
-              textAlign: "center",
-              fontFamily: '"Spline Sans", sans-serif',
-              fontSize: "clamp(1.75rem, 4vw, 2.625rem)",
-              fontStyle: "normal",
+              ...typography.sectionHeadingSpline,
+              fontSize: fontSizes.sectionHeadingLarge,
               fontWeight: 600,
-              lineHeight: "1.2",
-              marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)",
-              paddingLeft: "clamp(0.5rem, 2vw, 1rem)",
-              paddingRight: "clamp(0.5rem, 2vw, 1rem)"
+              padding: "0 clamp(0.5rem, 2vw, 1rem)",
+              whiteSpace: "pre-wrap"
             }}
           >
-            Experience the Future of
-            <br />
-            Human-AI Interaction
+            Experience the Future of{'\n'}Human-AI Interaction
           </h2>
-          <p 
+          <div 
             style={{
-              alignSelf: "stretch",
-              color: "#777777",
-              textAlign: "center",
-              fontFamily: '"Public Sans", sans-serif',
-              fontSize: "clamp(1rem, 1.8vw, 1.25rem)",
-              fontStyle: "normal",
-              fontWeight: 400,
-              lineHeight: "1.6",
-              marginTop: 0,
+              ...typography.sectionParagraph,
+              fontSize: "clamp(1rem, 1.8vw, 1.5rem)",
               marginBottom: "clamp(1.5rem, 4vw, 2.5rem)",
               maxWidth: "clamp(20rem, 80vw, 42rem)",
               marginLeft: "auto",
               marginRight: "auto",
-              textShadow: "0 1px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.6)",
-              letterSpacing: "0.01em",
-              paddingLeft: "clamp(1rem, 2vw, 1.5rem)",
-              paddingRight: "clamp(1rem, 2vw, 1.5rem)"
+              padding: "0 clamp(1rem, 2vw, 1.5rem)",
             }}
           >
-            Our platform seamlessly integrates learning, wellness, and
-            engagement into one intelligent companion that grows with you.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center" style={{ gap: "clamp(1rem, 2.5vw, 1.5rem)" }}>
-            <Button variant="heroOutline" size="xl" asChild>
-              <a 
-                href="#contact"
-                style={{
-                  color: "#FAFAFA",
-                  fontFamily: '"Public Sans", sans-serif',
-                  fontSize: "clamp(0.75rem, 1.2vw, 0.875rem)",
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "normal"
-                }}
-              >
-                Talk to Our Team
-              </a>
-            </Button>
+            <div style={{ display: "block", textAlign: "center", whiteSpace: "nowrap" }}>Our platform seamlessly integrates learning, wellness, and</div>
+            <div style={{ display: "block", textAlign: "center", whiteSpace: "nowrap" }}>engagement into one intelligent companion that grows with you.</div>
+          </div>
+          <div className="flex items-center justify-center">
+            <button
+              style={{
+                ...buttonBaseStyle,
+                backgroundColor: "rgba(240, 240, 240, 0.05)",
+                color: "#FAFAFA",
+                border: "1px solid #FAFAFA"
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "rgba(240, 240, 240, 0.1)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "rgba(240, 240, 240, 0.05)";
+              }}
+            >
+              Talk to Our Team
+            </button>
           </div>
         </div>
       </div>

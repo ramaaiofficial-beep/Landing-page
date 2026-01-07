@@ -103,20 +103,39 @@ export const Navbar = () => {
         transition: "background-color 0.3s, backdrop-filter 0.3s, border-color 0.3s, box-shadow 0.3s"
       }}
     >
-      <div className="container-custom">
-        <div className="flex items-center justify-between relative navbar-container" style={{ minHeight: "clamp(3.5rem, 8vw, 5rem)", height: "auto" }}>
-          {/* Logo */}
-          <a 
-            href="#home" 
-            className="flex flex-wrap flex-shrink-0"
-            onClick={(e) => handleNavClick(e, "#home")}
-          >
-            <img src={logo} alt="RAMA AI" className="w-auto navbar-logo" style={{ height: "clamp(1.5rem, 4vw, 3rem)", maxHeight: "80%", objectFit: "contain" }} />
-          </a>
+      {/* Background Image with 20% opacity - covers entire nav */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          opacity: 0.2,
+          zIndex: 0
+        }}
+      />
+      <div 
+        className="container-custom flex items-center justify-between relative navbar-container" 
+        style={{ 
+          minHeight: "clamp(3.5rem, 8vw, 5rem)", 
+          height: "auto",
+          position: "relative",
+          zIndex: 1
+        }}
+      >
+        {/* Logo */}
+        <a 
+          href="#home" 
+          className="flex flex-wrap flex-shrink-0"
+          onClick={(e) => handleNavClick(e, "#home")}
+        >
+          <img src={logo} alt="RAMA AI" className="w-auto navbar-logo" style={{ height: "clamp(1.5rem, 4vw, 3rem)", maxHeight: "80%", objectFit: "contain" }} />
+        </a>
 
           {/* Desktop Navigation */}
           <div 
-            className="hidden md:flex items-center gap-1 rounded-full px-2 py-1"
+            className="hidden md:flex items-center gap-1 rounded-full px-2 py-1 relative z-10"
             style={{
               position: "absolute",
               left: "50%",
@@ -187,14 +206,13 @@ export const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden text-foreground relative z-10"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
             style={{ padding: "clamp(0.375rem, 1vw, 0.5rem)", minWidth: "clamp(2.5rem, 6vw, 3rem)", minHeight: "clamp(2.5rem, 6vw, 3rem)" }}
           >
             {isMobileMenuOpen ? <X style={{ width: "clamp(1.25rem, 3vw, 1.5rem)", height: "clamp(1.25rem, 3vw, 1.5rem)" }} /> : <Menu style={{ width: "clamp(1.25rem, 3vw, 1.5rem)", height: "clamp(1.25rem, 3vw, 1.5rem)" }} />}
           </button>
-        </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (

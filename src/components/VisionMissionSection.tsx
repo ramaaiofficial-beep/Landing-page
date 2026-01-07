@@ -1,41 +1,25 @@
 import { Eye, Target } from "lucide-react";
+import { typography, fontSizes, containers } from "@/lib/styles";
 
 export const VisionMissionSection = () => {
   return (
     <section id="about" className="section-padding bg-background noise-overlay">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto" style={{ marginBottom: "clamp(1.5rem, 4vw, 2.5rem)" }}>
+        <div className="text-center max-w-2xl mx-auto px-2" style={containers.sectionHeader}>
           <h2 
-            className="px-2"
             style={{
-              alignSelf: "stretch",
-              textAlign: "center",
-              fontFamily: '"Public Sans", sans-serif',
-              fontSize: "clamp(1.75rem, 4vw, 2.625rem)",
-              fontStyle: "normal",
-              fontWeight: 500,
-              lineHeight: "1.2",
-              color: "#FAFAFA",
-              marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
+              ...typography.sectionHeading,
+              fontSize: fontSizes.sectionHeadingLarge,
             }}
           >
             Building AI with Heart & Soul
           </h2>
           <p 
             style={{
-              alignSelf: "stretch",
-              color: "#777777",
-              textAlign: "center",
-              fontFamily: '"Public Sans", sans-serif',
-              fontSize: "clamp(0.875rem, 1.6vw, 1.125rem)",
-              fontStyle: "normal",
-              fontWeight: 400,
-              lineHeight: "1.6",
-              letterSpacing: "0%",
-              marginTop: 0
+              ...typography.sectionParagraph,
+              fontSize: fontSizes.sectionParagraph,
             }}
-            className="px-2"
           >
             RAMA AI is an emerging deep-tech company focused on creating AI
             solutions that truly understand and serve humanity.
@@ -61,10 +45,10 @@ export const VisionMissionSection = () => {
                 color: "#FAFAFA",
                 textAlign: "center",
                 fontFamily: '"Public Sans", sans-serif',
-                fontSize: "clamp(1.25rem, 2.5vw, 1.625rem)",
+                fontSize: "clamp(1.25rem, 2.5vw, 2rem)",
                 fontStyle: "normal",
                 fontWeight: 200,
-                lineHeight: "1.3",
+                lineHeight: "normal",
                 marginBottom: "clamp(0.35rem, 1vw, 0.6rem)"
               }}
             >
@@ -76,10 +60,10 @@ export const VisionMissionSection = () => {
               color: "#777777",
               textAlign: "center",
               fontFamily: '"Public Sans", sans-serif',
-              fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)",
+              fontSize: "clamp(1rem, 1.5vw, 1.25rem)",
               fontStyle: "normal",
               fontWeight: 400,
-              lineHeight: "1.6",
+              lineHeight: "normal",
               marginTop: 0
             }}
           >
@@ -126,10 +110,10 @@ export const VisionMissionSection = () => {
                 color: "#FAFAFA",
                 textAlign: "center",
                 fontFamily: '"Public Sans", sans-serif',
-                fontSize: "clamp(1.25rem, 2.5vw, 1.625rem)",
+                fontSize: "clamp(1.25rem, 2.5vw, 2rem)",
                 fontStyle: "normal",
                 fontWeight: 200,
-                lineHeight: "1.3",
+                lineHeight: "normal",
                 marginBottom: "clamp(0.35rem, 1vw, 0.6rem)",
                 marginLeft: "auto",
                 marginRight: "auto"
@@ -143,16 +127,14 @@ export const VisionMissionSection = () => {
               color: "#777777",
               textAlign: "center",
               fontFamily: '"Public Sans", sans-serif',
-              fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)",
+              fontSize: "clamp(1rem, 1.5vw, 1.25rem)",
               fontStyle: "normal",
               fontWeight: 400,
-              lineHeight: "1.6",
+              lineHeight: "normal",
               marginTop: 0
             }}
           >
-              To continuously innovate human-centric AI systems through research,
-              real-world deployment, and collaboration—ensuring technology remains
-              trustworthy, inclusive, and beneficial to society.
+              To continuously innovate human centric AI systems through research, real-world deployment, and collaboratio ensuring technology remains trustworthy, inclusive, and beneficial to society.
             </p>
           </div>
         </div>

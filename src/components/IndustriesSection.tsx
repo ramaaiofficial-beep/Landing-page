@@ -6,6 +6,7 @@ import industryImg1 from "@/assets/WhatsApp Image 2025-12-30 at 1.50.11 PM.jpeg"
 import industryImg2 from "@/assets/WhatsApp Image 2025-12-30 at 1.50.24 PM.jpeg";
 import industryImg3 from "@/assets/WhatsApp Image 2025-12-30 at 1.50.56 PM.jpeg";
 import heroBg from "@/assets/hero section bg.png";
+import { typography, fontSizes, containers } from "@/lib/styles";
 
 const industries = [
   {
@@ -54,36 +55,20 @@ export const IndustriesSection = () => {
     <section id="industries" className="section-padding bg-background noise-overlay">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto" style={{ marginBottom: "clamp(1.5rem, 4vw, 2.5rem)" }}>
+        <div className="text-center max-w-2xl mx-auto px-2" style={containers.sectionHeader}>
           <h2 
             style={{
-              alignSelf: "stretch",
-              color: "#FAFAFA",
-              textAlign: "center",
-              fontFamily: '"Spline Sans", sans-serif',
-              fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)",
-              fontStyle: "normal",
-              fontWeight: 500,
-              lineHeight: "1.2",
-              marginBottom: "clamp(0.5rem, 1.2vw, 0.75rem)"
+              ...typography.sectionHeadingSpline,
+              fontSize: fontSizes.sectionHeading,
             }}
-            className="px-2"
           >
             Transforming Lives Across Industries
           </h2>
           <p 
-            style={{ 
-              alignSelf: "stretch",
-              color: "#777777",
-              textAlign: "center",
-              fontFamily: '"Public Sans", sans-serif',
-              fontSize: "clamp(0.875rem, 1.6vw, 1.125rem)",
-              fontStyle: "normal",
-              fontWeight: 400,
-              lineHeight: "1.6",
-              marginTop: 0
+            style={{
+              ...typography.sectionParagraph,
+              fontSize: fontSizes.sectionParagraph,
             }}
-            className="px-2"
           >
             Our AI solutions address real human needs in the sectors that matter most.
           </p>
@@ -145,14 +130,15 @@ export const IndustriesSection = () => {
                     <div 
                       className="inline-flex items-center justify-center" 
                       style={{ 
-                        width: "clamp(2.5rem, 5vw, 3rem)", 
-                        height: "clamp(2.5rem, 5vw, 3rem)", 
+                        width: "58px", 
+                        height: "58px", 
                         marginBottom: "clamp(0.25rem, 0.8vw, 0.5rem)",
-                        backgroundColor: "#FD5009",
-                        borderRadius: "clamp(0.25rem, 0.5vw, 0.5rem)"
+                        background: "linear-gradient(180deg, rgba(253, 80, 9, 0.6) 0%, rgba(239, 16, 5, 0.6) 100%)",
+                        borderRadius: "8px",
+                        padding: "15px 16px"
                       }}
                     >
-                      <industry.icon className="text-white" style={{ width: "clamp(1.25rem, 2.5vw, 1.5rem)", height: "clamp(1.25rem, 2.5vw, 1.5rem)", strokeWidth: 2 }} />
+                      <industry.icon className="text-white" style={{ width: "24px", height: "24px", strokeWidth: 2 }} />
                     </div>
                     {/* Title - Large white bold text */}
                     <h3 
@@ -160,13 +146,11 @@ export const IndustriesSection = () => {
                         alignSelf: "stretch",
                         color: "#FAFAFA",
                         fontFamily: '"Public Sans", sans-serif',
-                        fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
+                        fontSize: "clamp(1.75rem, 3.5vw, 2rem)",
                         fontStyle: "normal",
-                        fontWeight: 700,
-                        lineHeight: "1.2",
-                        marginBottom: "clamp(0.25rem, 0.8vw, 0.5rem)",
-                        letterSpacing: "-0.01em",
-                        textShadow: "0 2px 8px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.8)"
+                        fontWeight: 400,
+                        lineHeight: "normal",
+                        marginBottom: "clamp(0.25rem, 0.8vw, 0.5rem)"
                       }}
                     >
                       {industry.title}
@@ -178,14 +162,12 @@ export const IndustriesSection = () => {
                         color: "#777777",
                         textAlign: "left",
                         fontFamily: '"Public Sans", sans-serif',
-                        fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)",
+                        fontSize: "clamp(0.875rem, 1.5vw, 1.25rem)",
                         fontStyle: "normal",
                         fontWeight: 400,
-                        lineHeight: "1.6",
+                        lineHeight: "normal",
                         marginTop: 0,
-                        marginBottom: "clamp(0.5rem, 1.5vw, 1rem)",
-                        letterSpacing: "0.01em",
-                        textShadow: "0 1px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.6)"
+                        marginBottom: "clamp(0.5rem, 1.5vw, 1rem)"
                       }}
                       className="md:text-justify"
                     >
@@ -194,32 +176,25 @@ export const IndustriesSection = () => {
                     {/* Features - Lighter text with bullet points */}
                     <ul
                       style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: "clamp(0.5rem, 1.2vw, 0.75rem)",
+                        display: "block",
                         marginBottom: "clamp(1.5rem, 3vw, 2rem)",
                         color: "#777777",
                         fontFamily: '"Public Sans", sans-serif',
-                        fontSize: "20px",
+                        fontSize: "clamp(1rem, 1.5vw, 1.25rem)",
                         fontStyle: "normal",
                         fontWeight: 400,
-                        lineHeight: "100%",
-                        letterSpacing: "0%",
+                        lineHeight: 0,
                         listStyle: "none",
                         padding: 0,
-                        width: "347px",
-                        height: "96px",
-                        textShadow: "0 1px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.6)"
+                        whiteSpace: "nowrap"
                       }}
                     >
-                      {industry.features.map((feature) => (
-                        <li key={feature} className="flex items-start" style={{ gap: "clamp(0.5rem, 1vw, 0.75rem)" }}>
-                          <span style={{ 
-                            color: "#777777",
-                            marginTop: "0.25em",
-                            fontSize: "0.75em"
-                          }}>•</span>
-                          <span>{feature}</span>
+                      {industry.features.map((feature, idx) => (
+                        <li key={feature} style={{ 
+                          marginBottom: idx < industry.features.length - 1 ? 0 : 0,
+                          marginLeft: "30px"
+                        }}>
+                          <span style={{ lineHeight: "normal" }}>• {feature}</span>
                         </li>
                       ))}
                     </ul>
