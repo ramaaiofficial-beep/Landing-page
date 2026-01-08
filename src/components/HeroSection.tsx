@@ -7,7 +7,7 @@ export const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden" style={{ zIndex: 1 }}>
         <div className="absolute top-1/4 left-1/4 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ width: "clamp(12rem, 30vw, 24rem)", height: "clamp(12rem, 30vw, 24rem)" }} />
         <div className="absolute bottom-1/4 right-1/4 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ width: "clamp(10rem, 25vw, 20rem)", height: "clamp(10rem, 25vw, 20rem)", animationDelay: "1s" }} />
       </div>
@@ -15,17 +15,17 @@ export const HeroSection = () => {
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        style={{ backgroundImage: `url(${heroBg})`, zIndex: 0 }}
       />
       
       {/* Subtle dark overlay for text readability */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/40" style={{ zIndex: 1 }} />
       
       {/* Gradient overlay to enhance the image gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-transparent to-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-transparent to-black/50" style={{ zIndex: 2 }} />
 
       <div 
-        className="container-custom relative z-10 hero-container flex flex-col items-center justify-center" 
+        className="container-custom relative hero-container flex flex-col items-center justify-center" 
         style={{ 
           paddingTop: "0", 
           paddingBottom: "clamp(3rem, 6vw, 4.5rem)", 
@@ -35,7 +35,8 @@ export const HeroSection = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          alignItems: "center"
+          alignItems: "center",
+          zIndex: 10
         }}
       >
         {/* Fixed Navbar at top of hero section - will not move */}

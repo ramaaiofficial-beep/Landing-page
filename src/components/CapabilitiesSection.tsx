@@ -28,7 +28,7 @@ const capabilities = [
 export const CapabilitiesSection = () => {
   return (
     <section id="capabilities" className="section-padding bg-background noise-overlay relative">
-      <div className="container-custom relative z-10">
+      <div className="container-custom relative">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto px-2" style={containers.sectionHeader}>
           <h2 
