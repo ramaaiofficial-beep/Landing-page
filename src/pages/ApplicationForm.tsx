@@ -143,7 +143,7 @@ Optional Note: ${formData.note || "N/A"}
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main className="section-padding" style={{ paddingTop: "120px" }}>
+      <main className="section-padding" style={{ paddingTop: "clamp(4.5rem, 8vw, 6rem)" }}>
         <div className="container-custom max-w-3xl mx-auto">
           <div className="mb-8">
             <h1
@@ -155,6 +155,8 @@ Optional Note: ${formData.note || "N/A"}
                 fontWeight: 500,
                 lineHeight: "normal",
                 marginBottom: "16px",
+                textAlign: "center",
+                textDecoration: "underline",
               }}
             >
               Application Form
