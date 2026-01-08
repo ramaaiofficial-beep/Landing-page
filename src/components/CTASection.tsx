@@ -45,10 +45,17 @@ export const CTASection = () => {
               marginLeft: "auto",
               marginRight: "auto",
               padding: "0 clamp(1rem, 2vw, 1.5rem)",
+              textAlign: "center",
+              wordBreak: "normal",
+              hyphens: "none",
+              WebkitHyphens: "none",
+              MozHyphens: "none",
+              msHyphens: "none",
+              overflowWrap: "break-word",
+              whiteSpace: "normal"
             }}
           >
-            <div style={{ display: "block", textAlign: "center", whiteSpace: "nowrap" }}>Our platform seamlessly integrates learning, wellness, and</div>
-            <div style={{ display: "block", textAlign: "center", whiteSpace: "nowrap" }}>engagement into one intelligent companion that grows with you.</div>
+            Our platform seamlessly integrates learning, wellness, and engagement into one intelligent companion that grows with you.
           </div>
           <div className="flex items-center justify-center">
             <button

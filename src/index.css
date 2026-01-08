@@ -81,6 +81,13 @@
 @layer base {
   * {
     @apply border-border;
+    /* Prevent word breaking and hyphenation globally - keep words intact */
+    word-break: normal;
+    hyphens: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    overflow-wrap: break-word;
   }
 
   /* Viewport-based fluid scaling system - Universal compatibility */
@@ -195,8 +202,14 @@
     text-size-adjust: 100%;
     /* Prevent zoom on component load */
     zoom: 1;
-    word-wrap: break-word;
+    /* Prevent word breaking - keep words intact */
+    word-wrap: normal;
     overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
   }
   
   /* Prevent zoom on component mount */
@@ -210,11 +223,12 @@
     text-align: justify;
     text-justify: inter-word;
     word-spacing: normal;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    word-break: break-word;
+    /* Prevent word breaking and hyphenation - keep words intact */
+    hyphens: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    word-break: normal;
     overflow-wrap: break-word;
   }
 
@@ -240,6 +254,13 @@
     font-weight: 600;
     line-height: 1.2;
     letter-spacing: -0.02em;
+    /* Prevent word breaking and hyphenation - keep words intact */
+    word-break: normal;
+    hyphens: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    overflow-wrap: break-word;
   }
 
   h1 {
@@ -367,6 +388,16 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+  }
+
+  /* Ensure all text elements prevent word breaking */
+  span, div, a, button, label, li, td, th, input, textarea, select {
+    word-break: normal;
+    hyphens: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    overflow-wrap: break-word;
   }
 
   img, video, iframe {
